@@ -1,0 +1,18 @@
+<map id="HighResFlux::computeFlux" name="HighResFlux::computeFlux">
+<area shape="rect" id="node1" title="Overridden method for computing the numerical flux on interfaceID using an high resolution scheme." alt="" coords="5,392,203,419"/>
+<area shape="rect" id="node2" href="$classRoeFluxxhtml#a3b06be2b2c76bb0f2605eb5639d04651" title="Overridden method for computing the numerical flux on interfaceID using the Roe linearization." alt="" coords="270,275,438,301"/>
+<area shape="rect" id="node3" href="$classSolutionxhtml#a4a125cf00e6d055d4e4f07f240bd5f06" title="Returns the value of the conservative variable 1 (h) at nodeID." alt="" coords="547,5,722,32"/>
+<area shape="rect" id="node4" href="$classSolutionxhtml#a854dcab81b7d871752c058b007533faa" title="Returns the value of the conservative variable 2 (h*u) at nodeID." alt="" coords="547,56,722,83"/>
+<area shape="rect" id="node5" href="$classSolutionxhtml#a3b27c41a9fba14b1b4b60933cbcd5e2c" title="Returns the value of the conservative variable 3 (h*v) at nodeID." alt="" coords="547,107,722,133"/>
+<area shape="rect" id="node6" href="$classGridxhtml#a4e37698e22ce482fa5ab2527dc78f0a9" title="Gets the adjacent nodes to an interface (edge)" alt="" coords="829,494,1020,535"/>
+<area shape="rect" id="node9" href="$classModelEquationsxhtml#a63dc8124ff79ec29985885f605c4d9c2" title="Sets the eigenvalues projected on the direction defined by the normal." alt="" coords="505,392,764,419"/>
+<area shape="rect" id="node13" href="$classGridxhtml#aa3c3eb4bc0025097011a570976b5ef74" title="Returns the measure of an edge of the dual grid." alt="" coords="256,544,452,571"/>
+<area shape="rect" id="node15" href="$classHighResFluxxhtml#a8b49e66f58f79c89170ee0aed5f2f2f4" title="Sets the value of the flux limiter." alt="" coords="251,607,457,633"/>
+<area shape="rect" id="node16" href="$NumericalFluxes_8hxhtml#a1ab31b90bc584c635ec159468ceed9b2" title="Returns the sign of the object T." alt="" coords="612,696,657,723"/>
+<area shape="rect" id="node8" href="$classGridxhtml#a267c212cd957e88a027c520dae9c1a4c" title="Gets the normal vector to an edge of the dual grid." alt="" coords="520,443,749,469"/>
+<area shape="rect" id="node10" href="$classModelEquationsxhtml#af36c6cb949a2afa74888d79aa3c3dcc9" title="Sets the flux vector projected on the direction defined by the normal." alt="" coords="531,224,738,251"/>
+<area shape="rect" id="node11" href="$classModelEquationsxhtml#ab71e479ad381fcf52769b011e1b7a76f" title="Sets the matrix of left eigenvectors projected on the direction defined by the normal." alt="" coords="533,275,737,317"/>
+<area shape="rect" id="node12" href="$classModelEquationsxhtml#afa722d5fa5faeb0e1baaba5b1d5fd9b9" title="Sets the matrix of right eigenvectors projected on the direction defined by the normal." alt="" coords="528,158,741,199"/>
+<area shape="rect" id="node7" href="$namespaceswexhtml#aca666e377868955898f5bc54f97d8075" title="Prints an error message and exit the program." alt="" coords="1085,548,1203,575"/>
+<area shape="rect" id="node14" href="$classGridxhtml#a91328f210cc0eeee8177d075d0efa4eb" title="Gets measures of a dual grid element (length of both edges)" alt="" coords="812,577,1037,604"/>
+</map>

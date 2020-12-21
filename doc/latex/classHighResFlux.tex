@@ -1,0 +1,266 @@
+\hypertarget{classHighResFlux}{}\doxysection{High\+Res\+Flux Class Reference}
+\label{classHighResFlux}\index{HighResFlux@{HighResFlux}}
+
+
+Child class \mbox{\hyperlink{classHighResFlux}{High\+Res\+Flux}} defines attributes and methods for computing the numerical flux with an high resolution scheme.  
+
+
+
+
+{\ttfamily \#include $<$Numerical\+Fluxes.\+h$>$}
+
+
+
+Inheritance diagram for High\+Res\+Flux\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classHighResFlux__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for High\+Res\+Flux\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classHighResFlux__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHighResFlux_a61b107a51e7ec90be50aabc05b454ddb}{High\+Res\+Flux}} (\mbox{\hyperlink{classConfig}{Config}} $\ast$config, \mbox{\hyperlink{classSolution}{Solution}} \&sol)
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHighResFlux_aaa1b2b0fdc2b503005f6a22746a7cfb5}{$\sim$\+High\+Res\+Flux}} () override
+\begin{DoxyCompactList}\small\item\em Destructor of the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHighResFlux_a8b49e66f58f79c89170ee0aed5f2f2f4}{set\+Flux\+Limiter}} (double up\+Diff, double cen\+Diff)
+\begin{DoxyCompactList}\small\item\em Sets the value of the flux limiter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHighResFlux_ac866ca8fb86a95232be67540d6f64623}{compute\+Flux}} (\mbox{\hyperlink{classGrid}{Grid}} $\ast$mesh, \mbox{\hyperlink{classSolution}{Solution}} $\ast$sol, int \&interface\+ID, double \&dt) override
+\begin{DoxyCompactList}\small\item\em Overridden method for computing the numerical flux on interface\+ID using an high resolution scheme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$ \mbox{\hyperlink{classHighResFlux_a730e0212e77b8080f32db4fb836f42de}{diff\+W\+\_\+l}}
+\begin{DoxyCompactList}\small\item\em Difference between left and upwind left conservative variables. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classHighResFlux_af7752f11894caed19b8fc1d020762f18}{diff\+W\+\_\+r}}
+\begin{DoxyCompactList}\small\item\em Difference between right and upwind right conservative variables. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classHighResFlux_a69f0ef313bd1d638484b9afb72f3699d}{diff\+V\+\_\+l}}
+\begin{DoxyCompactList}\small\item\em Difference between characteristics left and upwind left. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classHighResFlux_a1dd5fa70a909b3f8d15394f5303c8976}{diff\+V\+\_\+r}}
+\begin{DoxyCompactList}\small\item\em Difference between characteristics right and upwind right. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classHighResFlux_a63974942739697008900ddcba4988203}{diff\+V\+\_\+up}}
+\begin{DoxyCompactList}\small\item\em Difference between upwind characteristics. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classHighResFlux_a3e5fcecbc67e7cfee4db181681afdfcc}{diffV}}
+\begin{DoxyCompactList}\small\item\em Difference between right and left characteristics. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classHighResFlux_a005513c6c767df53a114d5cb5919a3f3}{lambda\+Signed}}
+\begin{DoxyCompactList}\small\item\em Signed eigenvalues. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classHighResFlux_a258a4e3f4aea9217ab2d1239132d06f9}{phi}}
+\begin{DoxyCompactList}\small\item\em Value of the flux limiter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classHighResFlux_a92733171119989206e7e5972c64d6545}{flux\+Limiter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Child class \mbox{\hyperlink{classHighResFlux}{High\+Res\+Flux}} defines attributes and methods for computing the numerical flux with an high resolution scheme. 
+
+\begin{DoxyAuthor}{Author}
+Alberto Della Noce 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHighResFlux_a61b107a51e7ec90be50aabc05b454ddb}\label{classHighResFlux_a61b107a51e7ec90be50aabc05b454ddb}} 
+\index{HighResFlux@{HighResFlux}!HighResFlux@{HighResFlux}}
+\index{HighResFlux@{HighResFlux}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{HighResFlux()}{HighResFlux()}}
+{\footnotesize\ttfamily High\+Res\+Flux\+::\+High\+Res\+Flux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classConfig}{Config}} $\ast$}]{config,  }\item[{\mbox{\hyperlink{classSolution}{Solution}} \&}]{sol }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & -\/ Pointer to the \mbox{\hyperlink{classConfig}{Config}} class \\
+\hline
+\mbox{\texttt{ in}}  & {\em sol} & -\/ Reference to the solution \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHighResFlux_a61b107a51e7ec90be50aabc05b454ddb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classHighResFlux_aaa1b2b0fdc2b503005f6a22746a7cfb5}\label{classHighResFlux_aaa1b2b0fdc2b503005f6a22746a7cfb5}} 
+\index{HighResFlux@{HighResFlux}!````~HighResFlux@{$\sim$HighResFlux}}
+\index{````~HighResFlux@{$\sim$HighResFlux}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{$\sim$HighResFlux()}{~HighResFlux()}}
+{\footnotesize\ttfamily High\+Res\+Flux\+::$\sim$\+High\+Res\+Flux (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Destructor of the class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHighResFlux_ac866ca8fb86a95232be67540d6f64623}\label{classHighResFlux_ac866ca8fb86a95232be67540d6f64623}} 
+\index{HighResFlux@{HighResFlux}!computeFlux@{computeFlux}}
+\index{computeFlux@{computeFlux}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{computeFlux()}{computeFlux()}}
+{\footnotesize\ttfamily void High\+Res\+Flux\+::compute\+Flux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGrid}{Grid}} $\ast$}]{mesh,  }\item[{\mbox{\hyperlink{classSolution}{Solution}} $\ast$}]{sol,  }\item[{int \&}]{interface\+ID,  }\item[{double \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for computing the numerical flux on interface\+ID using an high resolution scheme. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mesh} & -\/ Pointer to the mesh \\
+\hline
+\mbox{\texttt{ in}}  & {\em sol} & -\/ Pointer to the solution \\
+\hline
+\mbox{\texttt{ in}}  & {\em interface\+ID} & -\/ ID of the interface \\
+\hline
+\mbox{\texttt{ in}}  & {\em dt} & -\/ Time step \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classRoeFlux_a3b06be2b2c76bb0f2605eb5639d04651}{Roe\+Flux}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHighResFlux_ac866ca8fb86a95232be67540d6f64623_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classHighResFlux_a8b49e66f58f79c89170ee0aed5f2f2f4}\label{classHighResFlux_a8b49e66f58f79c89170ee0aed5f2f2f4}} 
+\index{HighResFlux@{HighResFlux}!setFluxLimiter@{setFluxLimiter}}
+\index{setFluxLimiter@{setFluxLimiter}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{setFluxLimiter()}{setFluxLimiter()}}
+{\footnotesize\ttfamily void High\+Res\+Flux\+::set\+Flux\+Limiter (\begin{DoxyParamCaption}\item[{double}]{up\+Diff,  }\item[{double}]{cen\+Diff }\end{DoxyParamCaption})}
+
+
+
+Sets the value of the flux limiter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em up\+Diff} & -\/ Upwind difference between right and left variables \\
+\hline
+\mbox{\texttt{ in}}  & {\em cen\+Diff} & -\/ Centered difference between right and left variables \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classHighResFlux_a8b49e66f58f79c89170ee0aed5f2f2f4_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classHighResFlux_a3e5fcecbc67e7cfee4db181681afdfcc}\label{classHighResFlux_a3e5fcecbc67e7cfee4db181681afdfcc}} 
+\index{HighResFlux@{HighResFlux}!diffV@{diffV}}
+\index{diffV@{diffV}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{diffV}{diffV}}
+{\footnotesize\ttfamily double$\ast$ High\+Res\+Flux\+::diffV\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Difference between right and left characteristics. 
+
+\mbox{\Hypertarget{classHighResFlux_a69f0ef313bd1d638484b9afb72f3699d}\label{classHighResFlux_a69f0ef313bd1d638484b9afb72f3699d}} 
+\index{HighResFlux@{HighResFlux}!diffV\_l@{diffV\_l}}
+\index{diffV\_l@{diffV\_l}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{diffV\_l}{diffV\_l}}
+{\footnotesize\ttfamily double$\ast$ High\+Res\+Flux\+::diff\+V\+\_\+l\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Difference between characteristics left and upwind left. 
+
+\mbox{\Hypertarget{classHighResFlux_a1dd5fa70a909b3f8d15394f5303c8976}\label{classHighResFlux_a1dd5fa70a909b3f8d15394f5303c8976}} 
+\index{HighResFlux@{HighResFlux}!diffV\_r@{diffV\_r}}
+\index{diffV\_r@{diffV\_r}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{diffV\_r}{diffV\_r}}
+{\footnotesize\ttfamily double$\ast$ High\+Res\+Flux\+::diff\+V\+\_\+r\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Difference between characteristics right and upwind right. 
+
+\mbox{\Hypertarget{classHighResFlux_a63974942739697008900ddcba4988203}\label{classHighResFlux_a63974942739697008900ddcba4988203}} 
+\index{HighResFlux@{HighResFlux}!diffV\_up@{diffV\_up}}
+\index{diffV\_up@{diffV\_up}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{diffV\_up}{diffV\_up}}
+{\footnotesize\ttfamily double$\ast$ High\+Res\+Flux\+::diff\+V\+\_\+up\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Difference between upwind characteristics. 
+
+\mbox{\Hypertarget{classHighResFlux_a730e0212e77b8080f32db4fb836f42de}\label{classHighResFlux_a730e0212e77b8080f32db4fb836f42de}} 
+\index{HighResFlux@{HighResFlux}!diffW\_l@{diffW\_l}}
+\index{diffW\_l@{diffW\_l}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{diffW\_l}{diffW\_l}}
+{\footnotesize\ttfamily double$\ast$ High\+Res\+Flux\+::diff\+W\+\_\+l\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Difference between left and upwind left conservative variables. 
+
+\mbox{\Hypertarget{classHighResFlux_af7752f11894caed19b8fc1d020762f18}\label{classHighResFlux_af7752f11894caed19b8fc1d020762f18}} 
+\index{HighResFlux@{HighResFlux}!diffW\_r@{diffW\_r}}
+\index{diffW\_r@{diffW\_r}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{diffW\_r}{diffW\_r}}
+{\footnotesize\ttfamily double$\ast$ High\+Res\+Flux\+::diff\+W\+\_\+r\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Difference between right and upwind right conservative variables. 
+
+\mbox{\Hypertarget{classHighResFlux_a92733171119989206e7e5972c64d6545}\label{classHighResFlux_a92733171119989206e7e5972c64d6545}} 
+\index{HighResFlux@{HighResFlux}!fluxLimiter@{fluxLimiter}}
+\index{fluxLimiter@{fluxLimiter}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{fluxLimiter}{fluxLimiter}}
+{\footnotesize\ttfamily int High\+Res\+Flux\+::flux\+Limiter\hspace{0.3cm}{\ttfamily [private]}}
+
+Selected flux limiter \mbox{\Hypertarget{classHighResFlux_a005513c6c767df53a114d5cb5919a3f3}\label{classHighResFlux_a005513c6c767df53a114d5cb5919a3f3}} 
+\index{HighResFlux@{HighResFlux}!lambdaSigned@{lambdaSigned}}
+\index{lambdaSigned@{lambdaSigned}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{lambdaSigned}{lambdaSigned}}
+{\footnotesize\ttfamily double$\ast$ High\+Res\+Flux\+::lambda\+Signed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Signed eigenvalues. 
+
+\mbox{\Hypertarget{classHighResFlux_a258a4e3f4aea9217ab2d1239132d06f9}\label{classHighResFlux_a258a4e3f4aea9217ab2d1239132d06f9}} 
+\index{HighResFlux@{HighResFlux}!phi@{phi}}
+\index{phi@{phi}!HighResFlux@{HighResFlux}}
+\doxysubsubsection{\texorpdfstring{phi}{phi}}
+{\footnotesize\ttfamily double High\+Res\+Flux\+::phi\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Value of the flux limiter. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{NumericalFluxes_8h}{Numerical\+Fluxes.\+h}}\item 
+src/\mbox{\hyperlink{NumericalFluxes_8cpp}{Numerical\+Fluxes.\+cpp}}\end{DoxyCompactItemize}

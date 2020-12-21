@@ -1,0 +1,13 @@
+<map id="LaxWendroffFlux::computeFlux" name="LaxWendroffFlux::computeFlux">
+<area shape="rect" id="node1" title="Overridden method for computing the numerical flux on interfaceID using the Lax&#45;Wendroff scheme." alt="" coords="5,183,232,209"/>
+<area shape="rect" id="node2" href="$classSolutionxhtml#a4a125cf00e6d055d4e4f07f240bd5f06" title="Returns the value of the conservative variable 1 (h) at nodeID." alt="" coords="310,5,485,32"/>
+<area shape="rect" id="node3" href="$classSolutionxhtml#a854dcab81b7d871752c058b007533faa" title="Returns the value of the conservative variable 2 (h*u) at nodeID." alt="" coords="310,56,485,83"/>
+<area shape="rect" id="node4" href="$classSolutionxhtml#a3b27c41a9fba14b1b4b60933cbcd5e2c" title="Returns the value of the conservative variable 3 (h*v) at nodeID." alt="" coords="310,107,485,133"/>
+<area shape="rect" id="node5" href="$classGridxhtml#a4e37698e22ce482fa5ab2527dc78f0a9" title="Gets the adjacent nodes to an interface (edge)" alt="" coords="857,226,1048,267"/>
+<area shape="rect" id="node7" href="$classGridxhtml#aa3c3eb4bc0025097011a570976b5ef74" title="Returns the measure of an edge of the dual grid." alt="" coords="299,259,495,285"/>
+<area shape="rect" id="node9" href="$classGridxhtml#a267c212cd957e88a027c520dae9c1a4c" title="Gets the normal vector to an edge of the dual grid." alt="" coords="563,157,792,184"/>
+<area shape="rect" id="node10" href="$classModelEquationsxhtml#af36c6cb949a2afa74888d79aa3c3dcc9" title="Sets the flux vector projected on the direction defined by the normal." alt="" coords="294,309,501,336"/>
+<area shape="rect" id="node11" href="$classModelEquationsxhtml#a362ff35ee67218e73094a6234f9e17f2" title="Sets the Jacobian matrix projected on the direction defined by the normal." alt="" coords="280,360,515,387"/>
+<area shape="rect" id="node6" href="$namespaceswexhtml#aca666e377868955898f5bc54f97d8075" title="Prints an error message and exit the program." alt="" coords="1113,280,1231,307"/>
+<area shape="rect" id="node8" href="$classGridxhtml#a91328f210cc0eeee8177d075d0efa4eb" title="Gets measures of a dual grid element (length of both edges)" alt="" coords="840,360,1065,387"/>
+</map>

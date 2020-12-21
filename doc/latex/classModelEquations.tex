@@ -1,0 +1,186 @@
+\hypertarget{classModelEquations}{}\doxysection{Model\+Equations Class Reference}
+\label{classModelEquations}\index{ModelEquations@{ModelEquations}}
+
+
+Static class \mbox{\hyperlink{classModelEquations}{Model\+Equations}} contains methods defining the physical model of shallow waters.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Equations.\+h$>$}
+
+
+
+Collaboration diagram for Model\+Equations\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classModelEquations__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classModelEquations_a548bf9bc8fca8af30fef12c348d6c861}{Model\+Equations}} ()=default
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classModelEquations_ac758b1a18f069a030234d35edd0fc855}{$\sim$\+Model\+Equations}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor of the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classModelEquations_af36c6cb949a2afa74888d79aa3c3dcc9}{set\+Proj\+Flux}} (double height, double $\ast$velocity, const double $\ast$normal, double $\ast$flux)
+\begin{DoxyCompactList}\small\item\em Sets the flux vector projected on the direction defined by the normal. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classModelEquations_a362ff35ee67218e73094a6234f9e17f2}{set\+Proj\+Jacobian}} (double height, double $\ast$velocity, const double $\ast$normal, double $\ast$$\ast$proj\+Jacobian)
+\begin{DoxyCompactList}\small\item\em Sets the Jacobian matrix projected on the direction defined by the normal. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classModelEquations_afa722d5fa5faeb0e1baaba5b1d5fd9b9}{set\+Proj\+Right\+Matrix}} (double height, const double $\ast$velocity, const double $\ast$normal, double $\ast$$\ast$proj\+Right\+Matrix)
+\begin{DoxyCompactList}\small\item\em Sets the matrix of right eigenvectors projected on the direction defined by the normal. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classModelEquations_ab71e479ad381fcf52769b011e1b7a76f}{set\+Proj\+Left\+Matrix}} (double height, const double $\ast$velocity, const double $\ast$normal, double $\ast$$\ast$proj\+Left\+Matrix)
+\begin{DoxyCompactList}\small\item\em Sets the matrix of left eigenvectors projected on the direction defined by the normal. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classModelEquations_a63dc8124ff79ec29985885f605c4d9c2}{set\+Proj\+Eigenvalues}} (double height, const double $\ast$velocity, const double $\ast$normal, double $\ast$lambda)
+\begin{DoxyCompactList}\small\item\em Sets the eigenvalues projected on the direction defined by the normal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Static class \mbox{\hyperlink{classModelEquations}{Model\+Equations}} contains methods defining the physical model of shallow waters. 
+
+\begin{DoxyAuthor}{Author}
+Alberto Della Noce 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classModelEquations_a548bf9bc8fca8af30fef12c348d6c861}\label{classModelEquations_a548bf9bc8fca8af30fef12c348d6c861}} 
+\index{ModelEquations@{ModelEquations}!ModelEquations@{ModelEquations}}
+\index{ModelEquations@{ModelEquations}!ModelEquations@{ModelEquations}}
+\doxysubsubsection{\texorpdfstring{ModelEquations()}{ModelEquations()}}
+{\footnotesize\ttfamily Model\+Equations\+::\+Model\+Equations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructor of the class. 
+
+\mbox{\Hypertarget{classModelEquations_ac758b1a18f069a030234d35edd0fc855}\label{classModelEquations_ac758b1a18f069a030234d35edd0fc855}} 
+\index{ModelEquations@{ModelEquations}!````~ModelEquations@{$\sim$ModelEquations}}
+\index{````~ModelEquations@{$\sim$ModelEquations}!ModelEquations@{ModelEquations}}
+\doxysubsubsection{\texorpdfstring{$\sim$ModelEquations()}{~ModelEquations()}}
+{\footnotesize\ttfamily Model\+Equations\+::$\sim$\+Model\+Equations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destructor of the class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classModelEquations_a63dc8124ff79ec29985885f605c4d9c2}\label{classModelEquations_a63dc8124ff79ec29985885f605c4d9c2}} 
+\index{ModelEquations@{ModelEquations}!setProjEigenvalues@{setProjEigenvalues}}
+\index{setProjEigenvalues@{setProjEigenvalues}!ModelEquations@{ModelEquations}}
+\doxysubsubsection{\texorpdfstring{setProjEigenvalues()}{setProjEigenvalues()}}
+{\footnotesize\ttfamily void Model\+Equations\+::set\+Proj\+Eigenvalues (\begin{DoxyParamCaption}\item[{double}]{height,  }\item[{const double $\ast$}]{velocity,  }\item[{const double $\ast$}]{normal,  }\item[{double $\ast$}]{lambda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the eigenvalues projected on the direction defined by the normal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em height} & -\/ Height value \\
+\hline
+\mbox{\texttt{ in}}  & {\em velocity} & -\/ Velocity vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em normal} & -\/ Normal vector \\
+\hline
+\mbox{\texttt{ out}}  & {\em lambda} & -\/ Vector of eigenvalues \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModelEquations_af36c6cb949a2afa74888d79aa3c3dcc9}\label{classModelEquations_af36c6cb949a2afa74888d79aa3c3dcc9}} 
+\index{ModelEquations@{ModelEquations}!setProjFlux@{setProjFlux}}
+\index{setProjFlux@{setProjFlux}!ModelEquations@{ModelEquations}}
+\doxysubsubsection{\texorpdfstring{setProjFlux()}{setProjFlux()}}
+{\footnotesize\ttfamily void Model\+Equations\+::set\+Proj\+Flux (\begin{DoxyParamCaption}\item[{double}]{height,  }\item[{double $\ast$}]{velocity,  }\item[{const double $\ast$}]{normal,  }\item[{double $\ast$}]{flux }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the flux vector projected on the direction defined by the normal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em height} & -\/ Height value \\
+\hline
+\mbox{\texttt{ in}}  & {\em velocity} & -\/ Velocity vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em normal} & -\/ Normal vector \\
+\hline
+\mbox{\texttt{ out}}  & {\em flux} & -\/ Projected flux vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModelEquations_a362ff35ee67218e73094a6234f9e17f2}\label{classModelEquations_a362ff35ee67218e73094a6234f9e17f2}} 
+\index{ModelEquations@{ModelEquations}!setProjJacobian@{setProjJacobian}}
+\index{setProjJacobian@{setProjJacobian}!ModelEquations@{ModelEquations}}
+\doxysubsubsection{\texorpdfstring{setProjJacobian()}{setProjJacobian()}}
+{\footnotesize\ttfamily void Model\+Equations\+::set\+Proj\+Jacobian (\begin{DoxyParamCaption}\item[{double}]{height,  }\item[{double $\ast$}]{velocity,  }\item[{const double $\ast$}]{normal,  }\item[{double $\ast$$\ast$}]{proj\+Jacobian }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the Jacobian matrix projected on the direction defined by the normal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em height} & -\/ Height value \\
+\hline
+\mbox{\texttt{ in}}  & {\em velocity} & -\/ Velocity vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em normal} & -\/ Normal vector \\
+\hline
+\mbox{\texttt{ out}}  & {\em proj\+Jacobian} & -\/ Projected Jacobian matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModelEquations_ab71e479ad381fcf52769b011e1b7a76f}\label{classModelEquations_ab71e479ad381fcf52769b011e1b7a76f}} 
+\index{ModelEquations@{ModelEquations}!setProjLeftMatrix@{setProjLeftMatrix}}
+\index{setProjLeftMatrix@{setProjLeftMatrix}!ModelEquations@{ModelEquations}}
+\doxysubsubsection{\texorpdfstring{setProjLeftMatrix()}{setProjLeftMatrix()}}
+{\footnotesize\ttfamily void Model\+Equations\+::set\+Proj\+Left\+Matrix (\begin{DoxyParamCaption}\item[{double}]{height,  }\item[{const double $\ast$}]{velocity,  }\item[{const double $\ast$}]{normal,  }\item[{double $\ast$$\ast$}]{proj\+Left\+Matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the matrix of left eigenvectors projected on the direction defined by the normal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em height} & -\/ Height value \\
+\hline
+\mbox{\texttt{ in}}  & {\em velocity} & -\/ Velocity vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em normal} & -\/ Normal vector \\
+\hline
+\mbox{\texttt{ out}}  & {\em proj\+Left\+Matrix} & -\/ Projected left eigenvectors matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModelEquations_afa722d5fa5faeb0e1baaba5b1d5fd9b9}\label{classModelEquations_afa722d5fa5faeb0e1baaba5b1d5fd9b9}} 
+\index{ModelEquations@{ModelEquations}!setProjRightMatrix@{setProjRightMatrix}}
+\index{setProjRightMatrix@{setProjRightMatrix}!ModelEquations@{ModelEquations}}
+\doxysubsubsection{\texorpdfstring{setProjRightMatrix()}{setProjRightMatrix()}}
+{\footnotesize\ttfamily void Model\+Equations\+::set\+Proj\+Right\+Matrix (\begin{DoxyParamCaption}\item[{double}]{height,  }\item[{const double $\ast$}]{velocity,  }\item[{const double $\ast$}]{normal,  }\item[{double $\ast$$\ast$}]{proj\+Right\+Matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the matrix of right eigenvectors projected on the direction defined by the normal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em height} & -\/ Height value \\
+\hline
+\mbox{\texttt{ in}}  & {\em velocity} & -\/ Velocity vector \\
+\hline
+\mbox{\texttt{ in}}  & {\em normal} & -\/ Normal vector \\
+\hline
+\mbox{\texttt{ out}}  & {\em proj\+Right\+Matrix} & -\/ Projected right eigenvectors matrix \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{ModelEquations_8h}{Model\+Equations.\+h}}\item 
+src/\mbox{\hyperlink{ModelEquations_8cpp}{Model\+Equations.\+cpp}}\end{DoxyCompactItemize}

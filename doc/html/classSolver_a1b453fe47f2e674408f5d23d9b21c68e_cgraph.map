@@ -1,0 +1,12 @@
+<map id="Solver::setTimeStep" name="Solver::setTimeStep">
+<area shape="rect" id="node1" title="Sets the time step at every iteration with a fixed CFL number." alt="" coords="5,107,157,133"/>
+<area shape="rect" id="node2" href="$classGridxhtml#a91328f210cc0eeee8177d075d0efa4eb" title="Gets measures of a dual grid element (length of both edges)" alt="" coords="222,5,447,32"/>
+<area shape="rect" id="node4" href="$classSolutionxhtml#a93ca33bcde0dd438ff4ab40b3cff4b80" title="Returns the value of the primitive variable 1 (h) at nodeID." alt="" coords="259,107,410,133"/>
+<area shape="rect" id="node6" href="$classSolutionxhtml#ad6a4954517a6f464d9a5f7b366c26abc" title="Returns the value of the primitive variable 2 (u) at nodeID." alt="" coords="259,56,410,83"/>
+<area shape="rect" id="node8" href="$classSolutionxhtml#ae1679ee032038dd0d29e31002d426c9e" title="Returns the value of the primitive variable 3 (v) at nodeID." alt="" coords="259,157,410,184"/>
+<area shape="rect" id="node10" href="$classModelEquationsxhtml#a63dc8124ff79ec29985885f605c4d9c2" title="Sets the eigenvalues projected on the direction defined by the normal." alt="" coords="205,208,464,235"/>
+<area shape="rect" id="node3" href="$namespaceswexhtml#aca666e377868955898f5bc54f97d8075" title="Prints an error message and exit the program." alt="" coords="541,5,658,32"/>
+<area shape="rect" id="node5" href="$classSolutionxhtml#a4a125cf00e6d055d4e4f07f240bd5f06" title="Returns the value of the conservative variable 1 (h) at nodeID." alt="" coords="512,107,687,133"/>
+<area shape="rect" id="node7" href="$classSolutionxhtml#a854dcab81b7d871752c058b007533faa" title="Returns the value of the conservative variable 2 (h*u) at nodeID." alt="" coords="512,56,687,83"/>
+<area shape="rect" id="node9" href="$classSolutionxhtml#a3b27c41a9fba14b1b4b60933cbcd5e2c" title="Returns the value of the conservative variable 3 (h*v) at nodeID." alt="" coords="512,157,687,184"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="swe::getOptionInteger" name="swe::getOptionInteger">
+<area shape="rect" id="node1" title="Returns the selected integer option. If it is mandatory, returns the defaultValue if the option is no..." alt="" coords="5,56,172,83"/>
+<area shape="rect" id="node2" href="$namespaceswexhtml#ad16a86c30855f6cf6015555ed0148dcc" title="Returns the line of fileName in which keyword is found." alt="" coords="236,5,339,32"/>
+<area shape="rect" id="node3" href="$namespaceswexhtml#a028619a1d8fcc5fbce7253f26597b388" title="Prints a message when a default option is used." alt="" coords="220,56,355,83"/>
+<area shape="rect" id="node4" href="$namespaceswexhtml#aca666e377868955898f5bc54f97d8075" title="Prints an error message and exit the program." alt="" coords="229,107,346,133"/>
+</map>

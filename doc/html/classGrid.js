@@ -1,0 +1,25 @@
+var classGrid =
+[
+    [ "Grid", "classGridxhtml#a4ac9ff4f63552b4c61ff90fcb35ad66c", null ],
+    [ "Grid", "classGridxhtml#a1b2b42eb8b9c6ca82efdb22673c7b4af", null ],
+    [ "~Grid", "classGridxhtml#a3661d0a7f998caaaf8627d7a67072116", null ],
+    [ "buildUniformGrid", "classGridxhtml#a957bfa776c9608ad647e946f55c276a7", null ],
+    [ "getAdjacentNodesToInterface", "classGridxhtml#a4e37698e22ce482fa5ab2527dc78f0a9", null ],
+    [ "getDualEdgeMeasure", "classGridxhtml#aa3c3eb4bc0025097011a570976b5ef74", null ],
+    [ "getDualElementArea", "classGridxhtml#a88bbc32e4b2ac70838e95874ea88d245", null ],
+    [ "getDualElementMeasures", "classGridxhtml#a91328f210cc0eeee8177d075d0efa4eb", null ],
+    [ "getNInterfaces", "classGridxhtml#afd8ffc074f8481e1b9ef6b2db3a61da9", null ],
+    [ "getNNodes", "classGridxhtml#a13ffa5ab5552148c9cf43ef546b6150e", null ],
+    [ "getNormalToDualGridEdge", "classGridxhtml#a267c212cd957e88a027c520dae9c1a4c", null ],
+    [ "nBoundaries", "classGridxhtml#a37d44a3a4d88ad4c278780121700471e", null ],
+    [ "nInterfaces", "classGridxhtml#a66e56ba96f697e3c541dd812df04210e", null ],
+    [ "nNodes", "classGridxhtml#ae13edfd5acf083a6b5d6cf4e7f1c3cc5", null ],
+    [ "nNodesX", "classGridxhtml#af42fa1179be03fa7bb9533c4dd81f685", null ],
+    [ "nNodesY", "classGridxhtml#a3f55b2ad59d7616d1e4901a9dc9d9e90", null ],
+    [ "nodes", "classGridxhtml#a8c31a72deee7ecf41925774c721e1d9f", null ],
+    [ "nodesIDOfBoundaryID", "classGridxhtml#af7e2b1a7ba5721f25363c24b369d4e0d", null ],
+    [ "x0", "classGridxhtml#a77fc26619a2f39b98c20955300ccd498", null ],
+    [ "xf", "classGridxhtml#a556d9cac68793ebbac0f8777dbe421f9", null ],
+    [ "y0", "classGridxhtml#a49398602d411491cbfa510a5a89ba952", null ],
+    [ "yf", "classGridxhtml#a9c92a361720df687894cd302c15fb403", null ]
+];

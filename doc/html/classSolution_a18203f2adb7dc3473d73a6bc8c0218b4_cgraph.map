@@ -1,0 +1,5 @@
+<map id="Solution::Solution" name="Solution::Solution">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,141,32"/>
+<area shape="rect" id="node2" href="$classSolutionxhtml#aec6110f896a093833bd7507e03b24770" title="Initializes the solution on a mesh." alt="" coords="189,5,400,32"/>
+<area shape="rect" id="node3" href="$classGridxhtml#a13ffa5ab5552148c9cf43ef546b6150e" title="Returns the number of nodes on the mesh." alt="" coords="448,5,577,32"/>
+</map>

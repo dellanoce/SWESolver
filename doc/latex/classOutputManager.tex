@@ -1,0 +1,129 @@
+\hypertarget{classOutputManager}{}\doxysection{Output\+Manager Class Reference}
+\label{classOutputManager}\index{OutputManager@{OutputManager}}
+
+
+Static class \mbox{\hyperlink{classOutputManager}{Output\+Manager}} contains methods for printing the solution in different formats.  
+
+
+
+
+{\ttfamily \#include $<$Output\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Output\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classOutputManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOutputManager_ae834281ed4f1c85d668b876c1fd08fa3}{Output\+Manager}} ()=default
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classOutputManager_adf5c81442960c0907aaf721b10097570}{$\sim$\+Output\+Manager}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor of the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classOutputManager_a31a9ca44bdfd56000a6e4e536f19e1db}{print\+Solution\+V\+TK}} (\mbox{\hyperlink{classGrid}{Grid}} $\ast$mesh, \mbox{\hyperlink{classSolution}{Solution}} $\ast$sol, double time)
+\begin{DoxyCompactList}\small\item\em Prints the solution in V\+TK format. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classOutputManager_ae0eadbd95bb38b1e48c72426c6bcabc8}{print\+Solution\+Csv}} (\mbox{\hyperlink{classGrid}{Grid}} $\ast$mesh, \mbox{\hyperlink{classSolution}{Solution}} $\ast$sol, double time)
+\begin{DoxyCompactList}\small\item\em Prints the solution in csv format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Static class \mbox{\hyperlink{classOutputManager}{Output\+Manager}} contains methods for printing the solution in different formats. 
+
+\begin{DoxyAuthor}{Author}
+Alberto Della Noce 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classOutputManager_ae834281ed4f1c85d668b876c1fd08fa3}\label{classOutputManager_ae834281ed4f1c85d668b876c1fd08fa3}} 
+\index{OutputManager@{OutputManager}!OutputManager@{OutputManager}}
+\index{OutputManager@{OutputManager}!OutputManager@{OutputManager}}
+\doxysubsubsection{\texorpdfstring{OutputManager()}{OutputManager()}}
+{\footnotesize\ttfamily Output\+Manager\+::\+Output\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructor of the class. 
+
+\mbox{\Hypertarget{classOutputManager_adf5c81442960c0907aaf721b10097570}\label{classOutputManager_adf5c81442960c0907aaf721b10097570}} 
+\index{OutputManager@{OutputManager}!````~OutputManager@{$\sim$OutputManager}}
+\index{````~OutputManager@{$\sim$OutputManager}!OutputManager@{OutputManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$OutputManager()}{~OutputManager()}}
+{\footnotesize\ttfamily Output\+Manager\+::$\sim$\+Output\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destructor of the class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOutputManager_ae0eadbd95bb38b1e48c72426c6bcabc8}\label{classOutputManager_ae0eadbd95bb38b1e48c72426c6bcabc8}} 
+\index{OutputManager@{OutputManager}!printSolutionCsv@{printSolutionCsv}}
+\index{printSolutionCsv@{printSolutionCsv}!OutputManager@{OutputManager}}
+\doxysubsubsection{\texorpdfstring{printSolutionCsv()}{printSolutionCsv()}}
+{\footnotesize\ttfamily void Output\+Manager\+::print\+Solution\+Csv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGrid}{Grid}} $\ast$}]{mesh,  }\item[{\mbox{\hyperlink{classSolution}{Solution}} $\ast$}]{sol,  }\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints the solution in csv format. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mesh} & -\/ Pointer to the mesh \\
+\hline
+\mbox{\texttt{ in}}  & {\em sol} & -\/ Pointer to the solution \\
+\hline
+\mbox{\texttt{ in}}  & {\em time} & -\/ Time at which the solution is printed \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOutputManager_ae0eadbd95bb38b1e48c72426c6bcabc8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classOutputManager_a31a9ca44bdfd56000a6e4e536f19e1db}\label{classOutputManager_a31a9ca44bdfd56000a6e4e536f19e1db}} 
+\index{OutputManager@{OutputManager}!printSolutionVTK@{printSolutionVTK}}
+\index{printSolutionVTK@{printSolutionVTK}!OutputManager@{OutputManager}}
+\doxysubsubsection{\texorpdfstring{printSolutionVTK()}{printSolutionVTK()}}
+{\footnotesize\ttfamily void Output\+Manager\+::print\+Solution\+V\+TK (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGrid}{Grid}} $\ast$}]{mesh,  }\item[{\mbox{\hyperlink{classSolution}{Solution}} $\ast$}]{sol,  }\item[{double}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints the solution in V\+TK format. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mesh} & -\/ Pointer to the mesh \\
+\hline
+\mbox{\texttt{ in}}  & {\em sol} & -\/ Pointer to the solution \\
+\hline
+\mbox{\texttt{ in}}  & {\em time} & -\/ Time at which the solution is printed \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classOutputManager_a31a9ca44bdfd56000a6e4e536f19e1db_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{OutputManager_8h}{Output\+Manager.\+h}}\item 
+src/\mbox{\hyperlink{OutputManager_8cpp}{Output\+Manager.\+cpp}}\end{DoxyCompactItemize}

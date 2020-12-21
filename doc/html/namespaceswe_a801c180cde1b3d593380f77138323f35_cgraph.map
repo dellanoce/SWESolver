@@ -1,0 +1,6 @@
+<map id="swe::getOptionVectorStrings" name="swe::getOptionVectorStrings">
+<area shape="rect" id="node1" title="Returns the vector of strings option." alt="" coords="5,56,212,83"/>
+<area shape="rect" id="node2" href="$namespaceswexhtml#ad16a86c30855f6cf6015555ed0148dcc" title="Returns the line of fileName in which keyword is found." alt="" coords="267,5,370,32"/>
+<area shape="rect" id="node3" href="$namespaceswexhtml#aca666e377868955898f5bc54f97d8075" title="Prints an error message and exit the program." alt="" coords="260,56,377,83"/>
+<area shape="rect" id="node4" href="$namespaceswexhtml#a6433aaafee87e52ab9cbcc3ab911961a" title="Trims spaces in a string." alt="" coords="277,107,360,133"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="Config::readConfigOptions" name="Config::readConfigOptions">
+<area shape="rect" id="node1" title="Parses the config file and stores options and values." alt="" coords="5,114,199,140"/>
+<area shape="rect" id="node2" href="$namespaceswexhtml#ad962c13147a198364f993657b930b3d8" title="Returns the enumerator related to the option string within the given map." alt="" coords="263,38,437,64"/>
+<area shape="rect" id="node3" href="$namespaceswexhtml#aca666e377868955898f5bc54f97d8075" title="Prints an error message and exit the program." alt="" coords="510,88,627,115"/>
+<area shape="rect" id="node4" href="$namespaceswexhtml#a8c1ec9326b8b65ca0b13b58db66b22af" title="Returns the selected double option. If it is mandatory, returns the defaultValue if the option is not..." alt="" coords="267,88,433,115"/>
+<area shape="rect" id="node7" href="$namespaceswexhtml#a9328d9e8020926fcc4a0b36b200a0951" title="Returns the selected integer option. If it is mandatory, returns the defaultValue if the option is no..." alt="" coords="267,139,433,166"/>
+<area shape="rect" id="node8" href="$namespaceswexhtml#a7b988c6641ac2c6971a03a7fdc6ce6ae" title="Returns the selected string option among the possible contained in the list." alt="" coords="271,240,429,267"/>
+<area shape="rect" id="node10" href="$namespaceswexhtml#a801c180cde1b3d593380f77138323f35" title="Returns the vector of strings option." alt="" coords="247,190,453,216"/>
+<area shape="rect" id="node5" href="$namespaceswexhtml#ad16a86c30855f6cf6015555ed0148dcc" title="Returns the line of fileName in which keyword is found." alt="" coords="517,190,620,216"/>
+<area shape="rect" id="node6" href="$namespaceswexhtml#a028619a1d8fcc5fbce7253f26597b388" title="Prints a message when a default option is used." alt="" coords="501,139,636,166"/>
+<area shape="rect" id="node9" href="$namespaceswexhtml#a6433aaafee87e52ab9cbcc3ab911961a" title="Trims spaces in a string." alt="" coords="527,240,610,267"/>
+</map>

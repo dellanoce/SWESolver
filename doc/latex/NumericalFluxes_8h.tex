@@ -1,0 +1,55 @@
+\hypertarget{NumericalFluxes_8h}{}\doxysection{include/\+Numerical\+Fluxes.h File Reference}
+\label{NumericalFluxes_8h}\index{include/NumericalFluxes.h@{include/NumericalFluxes.h}}
+{\ttfamily \#include \char`\"{}Model\+Equations.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Solution.\+h\char`\"{}}\newline
+Include dependency graph for Numerical\+Fluxes.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{NumericalFluxes_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{NumericalFluxes_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classNumericalFluxes}{Numerical\+Fluxes}}
+\begin{DoxyCompactList}\small\item\em Class \mbox{\hyperlink{classNumericalFluxes}{Numerical\+Fluxes}} is an abstract class defining general attributes used to compute numerical fluxes with different numerical methods. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classRoeFlux}{Roe\+Flux}}
+\begin{DoxyCompactList}\small\item\em Child class \mbox{\hyperlink{classRoeFlux}{Roe\+Flux}} defines attributes and methods for computing the numerical flux with first order Roe linearization. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classLaxWendroffFlux}{Lax\+Wendroff\+Flux}}
+\begin{DoxyCompactList}\small\item\em Child class \mbox{\hyperlink{classLaxWendroffFlux}{Lax\+Wendroff\+Flux}} defines attributes and methods for computing the numerical flux with Lax-\/\+Wendroff second order scheme. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classHighResFlux}{High\+Res\+Flux}}
+\begin{DoxyCompactList}\small\item\em Child class \mbox{\hyperlink{classHighResFlux}{High\+Res\+Flux}} defines attributes and methods for computing the numerical flux with an high resolution scheme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{NumericalFluxes_8h_a1ab31b90bc584c635ec159468ceed9b2}{sgn}} (T val)
+\begin{DoxyCompactList}\small\item\em Returns the sign of the object T. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{NumericalFluxes_8h_a1ab31b90bc584c635ec159468ceed9b2}\label{NumericalFluxes_8h_a1ab31b90bc584c635ec159468ceed9b2}} 
+\index{NumericalFluxes.h@{NumericalFluxes.h}!sgn@{sgn}}
+\index{sgn@{sgn}!NumericalFluxes.h@{NumericalFluxes.h}}
+\doxysubsubsection{\texorpdfstring{sgn()}{sgn()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int sgn (\begin{DoxyParamCaption}\item[{T}]{val }\end{DoxyParamCaption})}
+
+
+
+Returns the sign of the object T. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em } & \\
+\hline
+\end{DoxyTemplParams}

@@ -1,0 +1,15 @@
+<map id="Config::Config" name="Config::Config">
+<area shape="rect" id="node1" title="Constructor of the class." alt="" coords="5,70,120,96"/>
+<area shape="rect" id="node2" href="$classConfigxhtml#a1f2a76ebb4179341c001dd645366d6f1" title="Initializes the default values." alt="" coords="210,19,351,46"/>
+<area shape="rect" id="node3" href="$classConfigxhtml#a04d499d71cec9aaaa9377cce8a6bb1b0" title="Prints simulation settings on screen." alt="" coords="168,70,393,96"/>
+<area shape="rect" id="node4" href="$classConfigxhtml#ab26406ce91eab1436b24859ded6f08d6" title="Parses the config file and stores options and values." alt="" coords="184,120,377,147"/>
+<area shape="rect" id="node5" href="$namespaceswexhtml#ad962c13147a198364f993657b930b3d8" title="Returns the enumerator related to the option string within the given map." alt="" coords="457,44,632,71"/>
+<area shape="rect" id="node6" href="$namespaceswexhtml#aca666e377868955898f5bc54f97d8075" title="Prints an error message and exit the program." alt="" coords="705,95,822,122"/>
+<area shape="rect" id="node7" href="$namespaceswexhtml#a8c1ec9326b8b65ca0b13b58db66b22af" title="Returns the selected double option. If it is mandatory, returns the defaultValue if the option is not..." alt="" coords="461,95,628,122"/>
+<area shape="rect" id="node10" href="$namespaceswexhtml#a9328d9e8020926fcc4a0b36b200a0951" title="Returns the selected integer option. If it is mandatory, returns the defaultValue if the option is no..." alt="" coords="461,146,628,172"/>
+<area shape="rect" id="node11" href="$namespaceswexhtml#a7b988c6641ac2c6971a03a7fdc6ce6ae" title="Returns the selected string option among the possible contained in the list." alt="" coords="465,247,624,274"/>
+<area shape="rect" id="node13" href="$namespaceswexhtml#a801c180cde1b3d593380f77138323f35" title="Returns the vector of strings option." alt="" coords="441,196,648,223"/>
+<area shape="rect" id="node8" href="$namespaceswexhtml#ad16a86c30855f6cf6015555ed0148dcc" title="Returns the line of fileName in which keyword is found." alt="" coords="712,196,815,223"/>
+<area shape="rect" id="node9" href="$namespaceswexhtml#a028619a1d8fcc5fbce7253f26597b388" title="Prints a message when a default option is used." alt="" coords="696,146,831,172"/>
+<area shape="rect" id="node12" href="$namespaceswexhtml#a6433aaafee87e52ab9cbcc3ab911961a" title="Trims spaces in a string." alt="" coords="722,247,805,274"/>
+</map>

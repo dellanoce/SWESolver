@@ -30,8 +30,7 @@ where the option `-j [jobs]` can be used for speeding up the compilation specify
 number of jobs.
 
 ### Documentation
-To generate the documentation (optional), move into folder `doc` and use the `doxygen`
-command:
+To generate the documentation (optional), just use the command `doxygen` in the main folder:
 ```
 $ doxygen
 ```

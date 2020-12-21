@@ -1,0 +1,11 @@
+<map id="Solver" name="Solver">
+<area shape="rect" id="node1" title="Class Solver implements the finite volume method for solving the shallow waters equations." alt="" coords="186,748,385,972"/>
+<area shape="rect" id="node2" title=" " alt="" coords="101,13,168,90"/>
+<area shape="rect" id="node4" href="$classNumericalFluxesxhtml" title="Class NumericalFluxes is an abstract class defining general attributes used to compute numerical flux..." alt="" coords="60,314,228,421"/>
+<area shape="rect" id="node8" href="$classSolutionxhtml" title="Class Solution defines the structure of the solution container." alt="" coords="252,263,420,472"/>
+<area shape="rect" id="node3" title=" " alt="" coords="70,593,271,685"/>
+<area shape="rect" id="node5" title=" " alt="" coords="406,601,565,678"/>
+<area shape="rect" id="node6" title="STL class." alt="" coords="445,329,531,406"/>
+<area shape="rect" id="node7" title="STL class." alt="" coords="419,5,557,97"/>
+<area shape="rect" id="node9" title=" " alt="" coords="325,13,363,90"/>
+</map>

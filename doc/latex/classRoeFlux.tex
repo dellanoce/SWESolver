@@ -1,0 +1,247 @@
+\hypertarget{classRoeFlux}{}\doxysection{Roe\+Flux Class Reference}
+\label{classRoeFlux}\index{RoeFlux@{RoeFlux}}
+
+
+Child class \mbox{\hyperlink{classRoeFlux}{Roe\+Flux}} defines attributes and methods for computing the numerical flux with first order Roe linearization.  
+
+
+
+
+{\ttfamily \#include $<$Numerical\+Fluxes.\+h$>$}
+
+
+
+Inheritance diagram for Roe\+Flux\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classRoeFlux__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Roe\+Flux\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRoeFlux__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRoeFlux_ac63cd5a03c569b83a77a4e24c39b1abe}{Roe\+Flux}} (\mbox{\hyperlink{classConfig}{Config}} $\ast$config, \mbox{\hyperlink{classSolution}{Solution}} \&sol)
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRoeFlux_a34320c1b5716bc32b6b3f7f3fa5878cd}{$\sim$\+Roe\+Flux}} () override
+\begin{DoxyCompactList}\small\item\em Destructor of the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRoeFlux_a3b06be2b2c76bb0f2605eb5639d04651}{compute\+Flux}} (\mbox{\hyperlink{classGrid}{Grid}} $\ast$mesh, \mbox{\hyperlink{classSolution}{Solution}} $\ast$sol, int \&interface\+ID, double \&dt) override
+\begin{DoxyCompactList}\small\item\em Overridden method for computing the numerical flux on interface\+ID using the Roe linearization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classRoeFlux_a95c06fb2e7957005a11f39a653221680}{entropy\+Fix}}
+\begin{DoxyCompactList}\small\item\em Enables or disables the entropy fix. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classRoeFlux_af4c272781306cce94d875e529e2869b7}{lambda\+\_\+l}}
+\begin{DoxyCompactList}\small\item\em Eigenvalues evaluated on the left node. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classRoeFlux_ae4d07f83a7ad219abc234c8cfb70d5d0}{lambda\+\_\+r}}
+\begin{DoxyCompactList}\small\item\em Eigenvalues evaluated on the right node. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classRoeFlux_aa0044b2a4147b88797ac0e3aec049ece}{lambda}}
+\begin{DoxyCompactList}\small\item\em Eigenvalues evaluated on Roe averaged variables. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classRoeFlux_a1d8b86a0a2ef0acbf6cff79ecb8d68b0}{roe\+Velocity}}
+\begin{DoxyCompactList}\small\item\em Roe averaged velocity. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classRoeFlux_a3d81fd8aad1a0c96fa2c300fa1f3717b}{diffW}}
+\begin{DoxyCompactList}\small\item\em Difference between right and left conservative variables. \end{DoxyCompactList}\item 
+double $\ast$$\ast$ \mbox{\hyperlink{classRoeFlux_a09f57012669b65ea39c2f1d4bca23dd9}{matrixR}}
+\begin{DoxyCompactList}\small\item\em Matrix of right eigenvectors. \end{DoxyCompactList}\item 
+double $\ast$$\ast$ \mbox{\hyperlink{classRoeFlux_aa84181e7c77b1e755e4b738c46382985}{matrixL}}
+\begin{DoxyCompactList}\small\item\em Matrix of left eigenvectors. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classRoeFlux_a2d8ff920c7071999fd011b7b2e4e8f9b}{roe\+Height}}
+\begin{DoxyCompactList}\small\item\em Roe averaged height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Child class \mbox{\hyperlink{classRoeFlux}{Roe\+Flux}} defines attributes and methods for computing the numerical flux with first order Roe linearization. 
+
+\begin{DoxyAuthor}{Author}
+Alberto Della Noce 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRoeFlux_ac63cd5a03c569b83a77a4e24c39b1abe}\label{classRoeFlux_ac63cd5a03c569b83a77a4e24c39b1abe}} 
+\index{RoeFlux@{RoeFlux}!RoeFlux@{RoeFlux}}
+\index{RoeFlux@{RoeFlux}!RoeFlux@{RoeFlux}}
+\doxysubsubsection{\texorpdfstring{RoeFlux()}{RoeFlux()}}
+{\footnotesize\ttfamily Roe\+Flux\+::\+Roe\+Flux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classConfig}{Config}} $\ast$}]{config,  }\item[{\mbox{\hyperlink{classSolution}{Solution}} \&}]{sol }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em config} & -\/ Pointer to the \mbox{\hyperlink{classConfig}{Config}} class \\
+\hline
+\mbox{\texttt{ in}}  & {\em sol} & -\/ Reference to the solution \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classRoeFlux_ac63cd5a03c569b83a77a4e24c39b1abe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRoeFlux_a34320c1b5716bc32b6b3f7f3fa5878cd}\label{classRoeFlux_a34320c1b5716bc32b6b3f7f3fa5878cd}} 
+\index{RoeFlux@{RoeFlux}!````~RoeFlux@{$\sim$RoeFlux}}
+\index{````~RoeFlux@{$\sim$RoeFlux}!RoeFlux@{RoeFlux}}
+\doxysubsubsection{\texorpdfstring{$\sim$RoeFlux()}{~RoeFlux()}}
+{\footnotesize\ttfamily Roe\+Flux\+::$\sim$\+Roe\+Flux (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Destructor of the class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRoeFlux_a3b06be2b2c76bb0f2605eb5639d04651}\label{classRoeFlux_a3b06be2b2c76bb0f2605eb5639d04651}} 
+\index{RoeFlux@{RoeFlux}!computeFlux@{computeFlux}}
+\index{computeFlux@{computeFlux}!RoeFlux@{RoeFlux}}
+\doxysubsubsection{\texorpdfstring{computeFlux()}{computeFlux()}}
+{\footnotesize\ttfamily void Roe\+Flux\+::compute\+Flux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGrid}{Grid}} $\ast$}]{mesh,  }\item[{\mbox{\hyperlink{classSolution}{Solution}} $\ast$}]{sol,  }\item[{int \&}]{interface\+ID,  }\item[{double \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overridden method for computing the numerical flux on interface\+ID using the Roe linearization. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mesh} & -\/ Pointer to the mesh \\
+\hline
+\mbox{\texttt{ in}}  & {\em sol} & -\/ Pointer to the solution \\
+\hline
+\mbox{\texttt{ in}}  & {\em interface\+ID} & -\/ ID of the interface \\
+\hline
+\mbox{\texttt{ in}}  & {\em dt} & -\/ Time step \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classNumericalFluxes_ac8f7dab2e6bbc1c19fbb00a602e63404}{Numerical\+Fluxes}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classHighResFlux_ac866ca8fb86a95232be67540d6f64623}{High\+Res\+Flux}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRoeFlux_a3b06be2b2c76bb0f2605eb5639d04651_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classRoeFlux_a3d81fd8aad1a0c96fa2c300fa1f3717b}\label{classRoeFlux_a3d81fd8aad1a0c96fa2c300fa1f3717b}} 
+\index{RoeFlux@{RoeFlux}!diffW@{diffW}}
+\index{diffW@{diffW}!RoeFlux@{RoeFlux}}
+\doxysubsubsection{\texorpdfstring{diffW}{diffW}}
+{\footnotesize\ttfamily double$\ast$ Roe\+Flux\+::diffW\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Difference between right and left conservative variables. 
+
+\mbox{\Hypertarget{classRoeFlux_a95c06fb2e7957005a11f39a653221680}\label{classRoeFlux_a95c06fb2e7957005a11f39a653221680}} 
+\index{RoeFlux@{RoeFlux}!entropyFix@{entropyFix}}
+\index{entropyFix@{entropyFix}!RoeFlux@{RoeFlux}}
+\doxysubsubsection{\texorpdfstring{entropyFix}{entropyFix}}
+{\footnotesize\ttfamily bool Roe\+Flux\+::entropy\+Fix\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Enables or disables the entropy fix. 
+
+\mbox{\Hypertarget{classRoeFlux_aa0044b2a4147b88797ac0e3aec049ece}\label{classRoeFlux_aa0044b2a4147b88797ac0e3aec049ece}} 
+\index{RoeFlux@{RoeFlux}!lambda@{lambda}}
+\index{lambda@{lambda}!RoeFlux@{RoeFlux}}
+\doxysubsubsection{\texorpdfstring{lambda}{lambda}}
+{\footnotesize\ttfamily double$\ast$ Roe\+Flux\+::lambda\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Eigenvalues evaluated on Roe averaged variables. 
+
+\mbox{\Hypertarget{classRoeFlux_af4c272781306cce94d875e529e2869b7}\label{classRoeFlux_af4c272781306cce94d875e529e2869b7}} 
+\index{RoeFlux@{RoeFlux}!lambda\_l@{lambda\_l}}
+\index{lambda\_l@{lambda\_l}!RoeFlux@{RoeFlux}}
+\doxysubsubsection{\texorpdfstring{lambda\_l}{lambda\_l}}
+{\footnotesize\ttfamily double$\ast$ Roe\+Flux\+::lambda\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Eigenvalues evaluated on the left node. 
+
+\mbox{\Hypertarget{classRoeFlux_ae4d07f83a7ad219abc234c8cfb70d5d0}\label{classRoeFlux_ae4d07f83a7ad219abc234c8cfb70d5d0}} 
+\index{RoeFlux@{RoeFlux}!lambda\_r@{lambda\_r}}
+\index{lambda\_r@{lambda\_r}!RoeFlux@{RoeFlux}}
+\doxysubsubsection{\texorpdfstring{lambda\_r}{lambda\_r}}
+{\footnotesize\ttfamily double$\ast$ Roe\+Flux\+::lambda\+\_\+r\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Eigenvalues evaluated on the right node. 
+
+\mbox{\Hypertarget{classRoeFlux_aa84181e7c77b1e755e4b738c46382985}\label{classRoeFlux_aa84181e7c77b1e755e4b738c46382985}} 
+\index{RoeFlux@{RoeFlux}!matrixL@{matrixL}}
+\index{matrixL@{matrixL}!RoeFlux@{RoeFlux}}
+\doxysubsubsection{\texorpdfstring{matrixL}{matrixL}}
+{\footnotesize\ttfamily double$\ast$$\ast$ Roe\+Flux\+::matrixL\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Matrix of left eigenvectors. 
+
+\mbox{\Hypertarget{classRoeFlux_a09f57012669b65ea39c2f1d4bca23dd9}\label{classRoeFlux_a09f57012669b65ea39c2f1d4bca23dd9}} 
+\index{RoeFlux@{RoeFlux}!matrixR@{matrixR}}
+\index{matrixR@{matrixR}!RoeFlux@{RoeFlux}}
+\doxysubsubsection{\texorpdfstring{matrixR}{matrixR}}
+{\footnotesize\ttfamily double$\ast$$\ast$ Roe\+Flux\+::matrixR\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Matrix of right eigenvectors. 
+
+\mbox{\Hypertarget{classRoeFlux_a2d8ff920c7071999fd011b7b2e4e8f9b}\label{classRoeFlux_a2d8ff920c7071999fd011b7b2e4e8f9b}} 
+\index{RoeFlux@{RoeFlux}!roeHeight@{roeHeight}}
+\index{roeHeight@{roeHeight}!RoeFlux@{RoeFlux}}
+\doxysubsubsection{\texorpdfstring{roeHeight}{roeHeight}}
+{\footnotesize\ttfamily double Roe\+Flux\+::roe\+Height\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Roe averaged height. 
+
+\mbox{\Hypertarget{classRoeFlux_a1d8b86a0a2ef0acbf6cff79ecb8d68b0}\label{classRoeFlux_a1d8b86a0a2ef0acbf6cff79ecb8d68b0}} 
+\index{RoeFlux@{RoeFlux}!roeVelocity@{roeVelocity}}
+\index{roeVelocity@{roeVelocity}!RoeFlux@{RoeFlux}}
+\doxysubsubsection{\texorpdfstring{roeVelocity}{roeVelocity}}
+{\footnotesize\ttfamily double$\ast$ Roe\+Flux\+::roe\+Velocity\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Roe averaged velocity. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{NumericalFluxes_8h}{Numerical\+Fluxes.\+h}}\item 
+src/\mbox{\hyperlink{NumericalFluxes_8cpp}{Numerical\+Fluxes.\+cpp}}\end{DoxyCompactItemize}

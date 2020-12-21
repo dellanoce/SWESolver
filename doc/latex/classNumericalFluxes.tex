@@ -1,0 +1,210 @@
+\hypertarget{classNumericalFluxes}{}\doxysection{Numerical\+Fluxes Class Reference}
+\label{classNumericalFluxes}\index{NumericalFluxes@{NumericalFluxes}}
+
+
+Class \mbox{\hyperlink{classNumericalFluxes}{Numerical\+Fluxes}} is an abstract class defining general attributes used to compute numerical fluxes with different numerical methods.  
+
+
+
+
+{\ttfamily \#include $<$Numerical\+Fluxes.\+h$>$}
+
+
+
+Inheritance diagram for Numerical\+Fluxes\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classNumericalFluxes__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Numerical\+Fluxes\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classNumericalFluxes__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNumericalFluxes_a8b6162fc7f1aa4c16d31c5e7866f7179}{Numerical\+Fluxes}} ()
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classNumericalFluxes_a6c5aac04f6888b02ba097f200d295a0d}{$\sim$\+Numerical\+Fluxes}} ()
+\begin{DoxyCompactList}\small\item\em Destructor of the class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classNumericalFluxes_ac8f7dab2e6bbc1c19fbb00a602e63404}{compute\+Flux}} (\mbox{\hyperlink{classGrid}{Grid}} $\ast$mesh, \mbox{\hyperlink{classSolution}{Solution}} $\ast$sol, int \&interface\+ID, double \&dt)=0
+\begin{DoxyCompactList}\small\item\em Virtual method for computing numerical fluxes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$ \mbox{\hyperlink{classNumericalFluxes_a2aff141b2b772e3463fd4c92991e3523}{numerical\+Flux}}
+\begin{DoxyCompactList}\small\item\em Numerical flux vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$ \mbox{\hyperlink{classNumericalFluxes_a5acd3096495f7d4000105c739a872cb2}{normal}}
+\begin{DoxyCompactList}\small\item\em Normal vector to an edge. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classNumericalFluxes_aea193c05342b9239e3924a5345380397}{flux\+\_\+l}}
+\begin{DoxyCompactList}\small\item\em Flux evaluated on left node. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classNumericalFluxes_adef112ee369dc4b9d3e00811b14967ca}{flux\+\_\+r}}
+\begin{DoxyCompactList}\small\item\em Flux evaluated on right node. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classNumericalFluxes_a12d5a5ca44c11d5f2da6d1ecebcaa2b8}{velocity\+\_\+l}}
+\begin{DoxyCompactList}\small\item\em Velocity evaluated on left node. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classNumericalFluxes_a1c778835a98949e4bf6bd04392afdb61}{velocity\+\_\+r}}
+\begin{DoxyCompactList}\small\item\em Velocity evaluated on right node. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classNumericalFluxes_ab7141ed8620cc48d29b4560243d7ce31}{height\+\_\+l}}
+\begin{DoxyCompactList}\small\item\em Height evaluated on left node. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classNumericalFluxes_a81cda84779abb4ae14855d0a3f0f6423}{height\+\_\+r}}
+\begin{DoxyCompactList}\small\item\em Height evaluated on right node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class \mbox{\hyperlink{classNumericalFluxes}{Numerical\+Fluxes}} is an abstract class defining general attributes used to compute numerical fluxes with different numerical methods. 
+
+\begin{DoxyAuthor}{Author}
+Alberto Della Noce 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNumericalFluxes_a8b6162fc7f1aa4c16d31c5e7866f7179}\label{classNumericalFluxes_a8b6162fc7f1aa4c16d31c5e7866f7179}} 
+\index{NumericalFluxes@{NumericalFluxes}!NumericalFluxes@{NumericalFluxes}}
+\index{NumericalFluxes@{NumericalFluxes}!NumericalFluxes@{NumericalFluxes}}
+\doxysubsubsection{\texorpdfstring{NumericalFluxes()}{NumericalFluxes()}}
+{\footnotesize\ttfamily Numerical\+Fluxes\+::\+Numerical\+Fluxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+\mbox{\Hypertarget{classNumericalFluxes_a6c5aac04f6888b02ba097f200d295a0d}\label{classNumericalFluxes_a6c5aac04f6888b02ba097f200d295a0d}} 
+\index{NumericalFluxes@{NumericalFluxes}!````~NumericalFluxes@{$\sim$NumericalFluxes}}
+\index{````~NumericalFluxes@{$\sim$NumericalFluxes}!NumericalFluxes@{NumericalFluxes}}
+\doxysubsubsection{\texorpdfstring{$\sim$NumericalFluxes()}{~NumericalFluxes()}}
+{\footnotesize\ttfamily Numerical\+Fluxes\+::$\sim$\+Numerical\+Fluxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor of the class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNumericalFluxes_ac8f7dab2e6bbc1c19fbb00a602e63404}\label{classNumericalFluxes_ac8f7dab2e6bbc1c19fbb00a602e63404}} 
+\index{NumericalFluxes@{NumericalFluxes}!computeFlux@{computeFlux}}
+\index{computeFlux@{computeFlux}!NumericalFluxes@{NumericalFluxes}}
+\doxysubsubsection{\texorpdfstring{computeFlux()}{computeFlux()}}
+{\footnotesize\ttfamily virtual void Numerical\+Fluxes\+::compute\+Flux (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGrid}{Grid}} $\ast$}]{mesh,  }\item[{\mbox{\hyperlink{classSolution}{Solution}} $\ast$}]{sol,  }\item[{int \&}]{interface\+ID,  }\item[{double \&}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Virtual method for computing numerical fluxes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em mesh} & -\/ Pointer to the mesh \\
+\hline
+\mbox{\texttt{ in}}  & {\em sol} & -\/ Pointer to the solution \\
+\hline
+\mbox{\texttt{ in}}  & {\em interface\+ID} & -\/ Interface (edge) where the numerical flux is computed \\
+\hline
+\mbox{\texttt{ in}}  & {\em dt} & -\/ Time step \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classHighResFlux_ac866ca8fb86a95232be67540d6f64623}{High\+Res\+Flux}}, \mbox{\hyperlink{classLaxWendroffFlux_aff3fc5fe4fcaf86f1b2ba2ae9c99d127}{Lax\+Wendroff\+Flux}}, and \mbox{\hyperlink{classRoeFlux_a3b06be2b2c76bb0f2605eb5639d04651}{Roe\+Flux}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classNumericalFluxes_aea193c05342b9239e3924a5345380397}\label{classNumericalFluxes_aea193c05342b9239e3924a5345380397}} 
+\index{NumericalFluxes@{NumericalFluxes}!flux\_l@{flux\_l}}
+\index{flux\_l@{flux\_l}!NumericalFluxes@{NumericalFluxes}}
+\doxysubsubsection{\texorpdfstring{flux\_l}{flux\_l}}
+{\footnotesize\ttfamily double$\ast$ Numerical\+Fluxes\+::flux\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Flux evaluated on left node. 
+
+\mbox{\Hypertarget{classNumericalFluxes_adef112ee369dc4b9d3e00811b14967ca}\label{classNumericalFluxes_adef112ee369dc4b9d3e00811b14967ca}} 
+\index{NumericalFluxes@{NumericalFluxes}!flux\_r@{flux\_r}}
+\index{flux\_r@{flux\_r}!NumericalFluxes@{NumericalFluxes}}
+\doxysubsubsection{\texorpdfstring{flux\_r}{flux\_r}}
+{\footnotesize\ttfamily double$\ast$ Numerical\+Fluxes\+::flux\+\_\+r\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Flux evaluated on right node. 
+
+\mbox{\Hypertarget{classNumericalFluxes_ab7141ed8620cc48d29b4560243d7ce31}\label{classNumericalFluxes_ab7141ed8620cc48d29b4560243d7ce31}} 
+\index{NumericalFluxes@{NumericalFluxes}!height\_l@{height\_l}}
+\index{height\_l@{height\_l}!NumericalFluxes@{NumericalFluxes}}
+\doxysubsubsection{\texorpdfstring{height\_l}{height\_l}}
+{\footnotesize\ttfamily double Numerical\+Fluxes\+::height\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Height evaluated on left node. 
+
+\mbox{\Hypertarget{classNumericalFluxes_a81cda84779abb4ae14855d0a3f0f6423}\label{classNumericalFluxes_a81cda84779abb4ae14855d0a3f0f6423}} 
+\index{NumericalFluxes@{NumericalFluxes}!height\_r@{height\_r}}
+\index{height\_r@{height\_r}!NumericalFluxes@{NumericalFluxes}}
+\doxysubsubsection{\texorpdfstring{height\_r}{height\_r}}
+{\footnotesize\ttfamily double Numerical\+Fluxes\+::height\+\_\+r\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Height evaluated on right node. 
+
+\mbox{\Hypertarget{classNumericalFluxes_a5acd3096495f7d4000105c739a872cb2}\label{classNumericalFluxes_a5acd3096495f7d4000105c739a872cb2}} 
+\index{NumericalFluxes@{NumericalFluxes}!normal@{normal}}
+\index{normal@{normal}!NumericalFluxes@{NumericalFluxes}}
+\doxysubsubsection{\texorpdfstring{normal}{normal}}
+{\footnotesize\ttfamily double$\ast$ Numerical\+Fluxes\+::normal\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Normal vector to an edge. 
+
+\mbox{\Hypertarget{classNumericalFluxes_a2aff141b2b772e3463fd4c92991e3523}\label{classNumericalFluxes_a2aff141b2b772e3463fd4c92991e3523}} 
+\index{NumericalFluxes@{NumericalFluxes}!numericalFlux@{numericalFlux}}
+\index{numericalFlux@{numericalFlux}!NumericalFluxes@{NumericalFluxes}}
+\doxysubsubsection{\texorpdfstring{numericalFlux}{numericalFlux}}
+{\footnotesize\ttfamily double$\ast$ Numerical\+Fluxes\+::numerical\+Flux}
+
+
+
+Numerical flux vector. 
+
+\mbox{\Hypertarget{classNumericalFluxes_a12d5a5ca44c11d5f2da6d1ecebcaa2b8}\label{classNumericalFluxes_a12d5a5ca44c11d5f2da6d1ecebcaa2b8}} 
+\index{NumericalFluxes@{NumericalFluxes}!velocity\_l@{velocity\_l}}
+\index{velocity\_l@{velocity\_l}!NumericalFluxes@{NumericalFluxes}}
+\doxysubsubsection{\texorpdfstring{velocity\_l}{velocity\_l}}
+{\footnotesize\ttfamily double$\ast$ Numerical\+Fluxes\+::velocity\+\_\+l\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Velocity evaluated on left node. 
+
+\mbox{\Hypertarget{classNumericalFluxes_a1c778835a98949e4bf6bd04392afdb61}\label{classNumericalFluxes_a1c778835a98949e4bf6bd04392afdb61}} 
+\index{NumericalFluxes@{NumericalFluxes}!velocity\_r@{velocity\_r}}
+\index{velocity\_r@{velocity\_r}!NumericalFluxes@{NumericalFluxes}}
+\doxysubsubsection{\texorpdfstring{velocity\_r}{velocity\_r}}
+{\footnotesize\ttfamily double$\ast$ Numerical\+Fluxes\+::velocity\+\_\+r\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Velocity evaluated on right node. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{NumericalFluxes_8h}{Numerical\+Fluxes.\+h}}\item 
+src/\mbox{\hyperlink{NumericalFluxes_8cpp}{Numerical\+Fluxes.\+cpp}}\end{DoxyCompactItemize}

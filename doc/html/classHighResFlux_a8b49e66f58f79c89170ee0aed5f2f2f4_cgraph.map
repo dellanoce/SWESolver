@@ -1,0 +1,4 @@
+<map id="HighResFlux::setFluxLimiter" name="HighResFlux::setFluxLimiter">
+<area shape="rect" id="node1" title="Sets the value of the flux limiter." alt="" coords="5,5,212,32"/>
+<area shape="rect" id="node2" href="$NumericalFluxes_8hxhtml#a1ab31b90bc584c635ec159468ceed9b2" title="Returns the sign of the object T." alt="" coords="260,5,305,32"/>
+</map>
