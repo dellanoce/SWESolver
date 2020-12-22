@@ -1,3 +1,6 @@
+![Image](test.png "header")
+
+
 SWESolver
 =========
 SWESolver is a software written in C++ for the numerical solution of the 2D shallow water
