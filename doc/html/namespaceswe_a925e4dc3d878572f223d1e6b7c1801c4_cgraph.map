@@ -1,4 +1,0 @@
-<map id="swe::setupFolder" name="swe::setupFolder">
-<area shape="rect" id="node1" title="Creates an empty directory if it does not exist. Otherwise it cleans or keeps its files." alt="" coords="5,5,137,32"/>
-<area shape="rect" id="node2" href="$namespaceswexhtml#a42d3d6275f2e292d8b750cb0c5584025" title="Returns a vector containing all path parts." alt="" coords="185,5,323,32"/>
-</map>

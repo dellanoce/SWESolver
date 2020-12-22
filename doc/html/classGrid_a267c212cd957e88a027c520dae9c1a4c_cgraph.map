@@ -1,5 +1,0 @@
-<map id="Grid::getNormalToDualGridEdge" name="Grid::getNormalToDualGridEdge">
-<area shape="rect" id="node1" title="Gets the normal vector to an edge of the dual grid." alt="" coords="5,42,235,69"/>
-<area shape="rect" id="node2" href="$classGridxhtml#a4e37698e22ce482fa5ab2527dc78f0a9" title="Gets the adjacent nodes to an interface (edge)" alt="" coords="283,5,473,47"/>
-<area shape="rect" id="node3" href="$namespaceswexhtml#aca666e377868955898f5bc54f97d8075" title="Prints an error message and exit the program." alt="" coords="521,42,639,69"/>
-</map>

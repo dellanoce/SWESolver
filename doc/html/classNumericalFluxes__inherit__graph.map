@@ -1,6 +1,0 @@
-<map id="NumericalFluxes" name="NumericalFluxes">
-<area shape="rect" id="node1" title="Class NumericalFluxes is an abstract class defining general attributes used to compute numerical flux..." alt="" coords="93,5,261,215"/>
-<area shape="rect" id="node2" href="$classLaxWendroffFluxxhtml" title="Child class LaxWendroffFlux defines attributes and methods for computing the numerical flux with Lax&#45;..." alt="" coords="5,299,175,450"/>
-<area shape="rect" id="node3" href="$classRoeFluxxhtml" title="Child class RoeFlux defines attributes and methods for computing the numerical flux with first order ..." alt="" coords="199,263,331,487"/>
-<area shape="rect" id="node4" href="$classHighResFluxxhtml" title="Child class HighResFlux defines attributes and methods for computing the numerical flux with an high ..." alt="" coords="194,535,335,773"/>
-</map>

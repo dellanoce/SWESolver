@@ -1,5 +1,0 @@
-<map id="Solution::primitive2" name="Solution::primitive2">
-<area shape="rect" id="node1" title="Returns the value of the primitive variable 2 (u) at nodeID." alt="" coords="5,31,156,57"/>
-<area shape="rect" id="node2" href="$classSolutionxhtml#a4a125cf00e6d055d4e4f07f240bd5f06" title="Returns the value of the conservative variable 1 (h) at nodeID." alt="" coords="204,5,379,32"/>
-<area shape="rect" id="node3" href="$classSolutionxhtml#a854dcab81b7d871752c058b007533faa" title="Returns the value of the conservative variable 2 (h*u) at nodeID." alt="" coords="204,56,379,83"/>
-</map>

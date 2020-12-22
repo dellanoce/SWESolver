@@ -1,5 +1,0 @@
-<map id="Grid::getDualElementArea" name="Grid::getDualElementArea">
-<area shape="rect" id="node1" title="Returns the area of a dual element." alt="" coords="5,31,197,57"/>
-<area shape="rect" id="node2" href="$classGridxhtml#a91328f210cc0eeee8177d075d0efa4eb" title="Gets measures of a dual grid element (length of both edges)" alt="" coords="245,5,471,32"/>
-<area shape="rect" id="node3" href="$namespaceswexhtml#aca666e377868955898f5bc54f97d8075" title="Prints an error message and exit the program." alt="" coords="519,31,636,57"/>
-</map>

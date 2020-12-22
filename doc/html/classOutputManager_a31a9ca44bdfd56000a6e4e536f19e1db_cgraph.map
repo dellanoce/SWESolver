@@ -1,7 +1,0 @@
-<map id="OutputManager::printSolutionVTK" name="OutputManager::printSolutionVTK">
-<area shape="rect" id="node1" title="Prints the solution in VTK format." alt="" coords="5,81,245,108"/>
-<area shape="rect" id="node2" href="$classSolutionxhtml#a4a125cf00e6d055d4e4f07f240bd5f06" title="Returns the value of the conservative variable 1 (h) at nodeID." alt="" coords="293,5,468,32"/>
-<area shape="rect" id="node3" href="$classSolutionxhtml#a854dcab81b7d871752c058b007533faa" title="Returns the value of the conservative variable 2 (h*u) at nodeID." alt="" coords="293,56,468,83"/>
-<area shape="rect" id="node4" href="$classSolutionxhtml#a3b27c41a9fba14b1b4b60933cbcd5e2c" title="Returns the value of the conservative variable 3 (h*v) at nodeID." alt="" coords="293,107,468,133"/>
-<area shape="rect" id="node5" href="$namespaceswexhtml#aca666e377868955898f5bc54f97d8075" title="Prints an error message and exit the program." alt="" coords="322,157,439,184"/>
-</map>

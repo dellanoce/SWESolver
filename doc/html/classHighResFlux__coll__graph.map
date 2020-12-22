@@ -1,8 +1,0 @@
-<map id="HighResFlux" name="HighResFlux">
-<area shape="rect" id="node1" title="Child class HighResFlux defines attributes and methods for computing the numerical flux with an high ..." alt="" coords="89,700,231,821"/>
-<area shape="rect" id="node2" href="$classRoeFluxxhtml" title="Child class RoeFlux defines attributes and methods for computing the numerical flux with first order ..." alt="" coords="94,531,226,637"/>
-<area shape="rect" id="node3" href="$classNumericalFluxesxhtml" title="Class NumericalFluxes is an abstract class defining general attributes used to compute numerical flux..." alt="" coords="213,253,381,360"/>
-<area shape="rect" id="node4" title=" " alt="" coords="71,5,137,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="405,268,456,345"/>
-<area shape="rect" id="node6" title=" " alt="" coords="250,545,289,623"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="RoeFlux" name="RoeFlux">
-<area shape="rect" id="node1" title="Child class RoeFlux defines attributes and methods for computing the numerical flux with first order ..." alt="" coords="23,263,155,487"/>
-<area shape="rect" id="node3" href="$classHighResFluxxhtml" title="Child class HighResFlux defines attributes and methods for computing the numerical flux with an high ..." alt="" coords="19,535,160,773"/>
-<area shape="rect" id="node2" href="$classNumericalFluxesxhtml" title="Class NumericalFluxes is an abstract class defining general attributes used to compute numerical flux..." alt="" coords="5,5,173,215"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="swe::getOptionString" name="swe::getOptionString">
-<area shape="rect" id="node1" title="Returns the selected string option among the possible contained in the list." alt="" coords="5,56,164,83"/>
-<area shape="rect" id="node2" href="$namespaceswexhtml#ad16a86c30855f6cf6015555ed0148dcc" title="Returns the line of fileName in which keyword is found." alt="" coords="228,5,331,32"/>
-<area shape="rect" id="node3" href="$namespaceswexhtml#a028619a1d8fcc5fbce7253f26597b388" title="Prints a message when a default option is used." alt="" coords="212,56,347,83"/>
-<area shape="rect" id="node4" href="$namespaceswexhtml#a6433aaafee87e52ab9cbcc3ab911961a" title="Trims spaces in a string." alt="" coords="238,107,321,133"/>
-</map>

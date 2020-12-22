@@ -1,3 +1,0 @@
-/home/alberto/SWESolver/build/CMakeFiles/rebuild_cache.dir
-/home/alberto/SWESolver/build/CMakeFiles/edit_cache.dir
-/home/alberto/SWESolver/build/CMakeFiles/SWE.dir
