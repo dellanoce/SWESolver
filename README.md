@@ -1,4 +1,4 @@
-![Image](test.png "header")
+![Image](test.gif "header")
 
 
 SWESolver
