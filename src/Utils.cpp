@@ -2,12 +2,21 @@
 
 namespace swe {
 
+    void printMessage(const string &message) {
+
+        int worldRank;
+        MPI_Comm_rank(MPI_COMM_WORLD, &worldRank);
+
+        if (worldRank == MASTER_NODE)
+            cout << message << endl;
+    }
+
     void printError(const string &message) {
 
-        int currentRank;
-        MPI_Comm_rank(MPI_COMM_WORLD, &currentRank);
+        int worldRank;
+        MPI_Comm_rank(MPI_COMM_WORLD, &worldRank);
 
-        if (currentRank == MASTER_NODE) {
+        if (worldRank == MASTER_NODE) {
             cout << endl;
             cerr << endl << "[Error] " << message << endl << endl;
         }
@@ -17,9 +26,14 @@ namespace swe {
 
     void printDefault(const string &optionToFind, const string &defaultOption) {
 
-        cout << "[Caution] \n";
-        cout << optionToFind + " not specified. Selected DEFAULT: " << defaultOption << ". Please check carefully"
-             << " the configuration file if you want to set another " << optionToFind << endl << endl;
+        int worldRank;
+        MPI_Comm_rank(MPI_COMM_WORLD, &worldRank);
+
+        if (worldRank == MASTER_NODE) {
+            cout << "[Caution] \n";
+            cout << optionToFind + " not specified. Selected DEFAULT: " << defaultOption << ". Please check carefully"
+                 << " the configuration file if you want to set another " << optionToFind << endl << endl;
+        }
     }
 
     void setupFolder(const string& path, folderOptions_t option) {

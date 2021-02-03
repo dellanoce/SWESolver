@@ -5,7 +5,7 @@ Config::Config(const string &configFile) {
     this->initDefault();
     this->readConfigOptions(configFile);
 
-    if (this->currentRank == MASTER_NODE) {
+    if (this->worldRank == MASTER_NODE) {
         this->printHeader();
         this->printSimulationSettings();
     }
@@ -13,7 +13,7 @@ Config::Config(const string &configFile) {
 
 void Config::initDefault() {
 
-    MPI_Comm_rank(MPI_COMM_WORLD, &this->currentRank);
+    MPI_Comm_rank(MPI_COMM_WORLD, &this->worldRank);
 
     this->nNodesX   = SWE_UNDEFINED;
     this->nNodesY   = SWE_UNDEFINED;

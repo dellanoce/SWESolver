@@ -14,7 +14,7 @@ using namespace swe;
  */
 class Config {
 private:
-    int currentRank;
+    int worldRank; /*!< \brief MPI rank */
     int nNodesX; /*!< \brief Number of nodes on X-direction */
     int nNodesY; /*!< \brief Number of nodes on Y-direction */
     double x0Lim; /*!< \brief X-coordinate of the first vertex on X-axis */

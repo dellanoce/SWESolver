@@ -3,14 +3,15 @@
 int main(int argc, char *argv[]) {
 
     double startSim = MPI_Wtime();
-    double totalSimTime, meshTime, solTime;
-    int worldSize, currentRank;
+    double totalSimTime, meshTime, solTime, startMesh, startSol;
+    int worldSize, worldRank;
     string configFileName;
+    stringstream ssMessage;
 
     // --- MPI init --- //
     MPI_Init(&argc, &argv);
     MPI_Comm_size(MPI_COMM_WORLD, &worldSize);
-    MPI_Comm_rank(MPI_COMM_WORLD, &currentRank);
+    MPI_Comm_rank(MPI_COMM_WORLD, &worldRank);
 
     // --- Check inputs --- //
     if (argc < 2)
@@ -22,46 +23,57 @@ int main(int argc, char *argv[]) {
     Config* config;
     config = new Config(configFileName);
 
-    cout << "|----------------------------- RUN CFD SIMULATION -----------------------------|" << endl;
-    cout << endl;
-
-    cout << " Creating uniform structured mesh..." << endl;
+    ssMessage << "|----------------------------- RUN CFD SIMULATION -----------------------------|" << endl;
+    printMessage(ssMessage.str());
 
     // -- Create uniform mesh --- //
-    double startMesh = MPI_Wtime();
+    printMessage(" Creating uniform structured mesh...");
+    startMesh = MPI_Wtime();
+
     Grid grid(config);
     meshTime = MPI_Wtime() - startMesh;
-    cout << " Mesh created in " << meshTime << " seconds" << endl << endl;
-
-    cout << " Creating solution structure..." << endl;
+    ssMessage.str("");
+    ssMessage << " Mesh created in " << meshTime << " seconds" << endl;
+    printMessage(ssMessage.str());
 
     // --- Create solution object --- //
-    double startSol = MPI_Wtime();
+    printMessage(" Creating solution structure...");
+    startSol = MPI_Wtime();
+
     Solution w0(&grid);
     solTime = MPI_Wtime() - startSol;
-    cout << " Solution structure created in " << solTime << " seconds" << endl << endl;
-
-    cout << " Creating solver structure..." << endl << endl;
+    ssMessage.str("");
+    ssMessage << " Solution structure created in " << solTime << " seconds" << endl;
+    printMessage(ssMessage.str());
 
     // --- Instantiate the Godunov solver class --- //
+    ssMessage.str("");
+    ssMessage << " Creating solver structure..." << endl;
+    printMessage(ssMessage.str());
+
     Solver god(config, &grid);
 
-    cout << " Setting initial condition..." << endl;
-
     // --- Set initial solution --- //
+    printMessage(" Setting initial condition...");
+
     god.setInitialSolution(&grid, w0);
-    swe::setupFolder("./solution_data", CLEAN_FOLDER);
-    swe::setupFolder("./VTK", CLEAN_FOLDER);
+    if (worldRank == MASTER_NODE) {
+        swe::setupFolder("./solution_data", CLEAN_FOLDER);
+        swe::setupFolder("./VTK", CLEAN_FOLDER);
+    }
     OutputManager::printSolutionVTK(&grid, &w0, 0.00000);
     OutputManager::printSolutionCsv(&grid, &w0, 0.00000);
 
-    cout << endl;
-    cout << " Start CFD computation..." << endl << endl;
-
     // --- Run simulation --- //
+    ssMessage.str("");
+    ssMessage << endl << " Start CFD computation..." << endl;
+    printMessage(ssMessage.str());
+
     god.runGodnuovSolver(&grid);
     totalSimTime = MPI_Wtime() - startSim;
-    cout << " Simulation ended in " << totalSimTime << " seconds on " << worldSize << " cores" << endl;
+    ssMessage.str("");
+    ssMessage << " Simulation ended in " << totalSimTime << " seconds on " << worldSize << " cores" << endl;
+    printMessage(ssMessage.str());
 
     MPI_Finalize();
 

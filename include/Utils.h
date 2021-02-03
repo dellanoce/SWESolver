@@ -36,8 +36,14 @@ enum folderOptions_t {
 namespace swe {
 
     /*!
+     * \brief Prints a message
+     * @param[in] message - Message to be printed
+     */
+    void printMessage(const string &message);
+
+    /*!
      * \brief Prints an error message and exit the program
-     * @param[in] errorMessage - Message to be printed
+     * @param[in] errorMessage - Error message to be printed
      */
     void printError(const string &errorMessage);
 
