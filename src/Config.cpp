@@ -4,10 +4,16 @@ Config::Config(const string &configFile) {
 
     this->initDefault();
     this->readConfigOptions(configFile);
-    this->printSimulationSettings();
+
+    if (this->currentRank == MASTER_NODE) {
+        this->printHeader();
+        this->printSimulationSettings();
+    }
 }
 
 void Config::initDefault() {
+
+    MPI_Comm_rank(MPI_COMM_WORLD, &this->currentRank);
 
     this->nNodesX   = SWE_UNDEFINED;
     this->nNodesY   = SWE_UNDEFINED;
@@ -100,5 +106,15 @@ void Config::printSimulationSettings() {
                     cout << this->markerOpen[i];
             }
     cout << ")" << endl;
+    cout << endl;
+}
+
+void Config::printHeader() {
+
+    cout << "|------------------------------------------------------------------------------|" << endl;
+    cout << "|                                                                              |" << endl;
+    cout << "| 2D shallow water solver equations solver                                     |" << endl;
+    cout << "|                                                                              |" << endl;
+    cout << "|------------------------------------------------------------------------------|" << endl;
     cout << endl;
 }

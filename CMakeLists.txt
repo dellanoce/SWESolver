@@ -20,6 +20,19 @@ file(GLOB SOURCE ${SRC_DIR}/*.cpp
 
 include_directories(${INC_DIR})
 
+# ---------------------------------------------------- Find MPI
+find_package(MPI REQUIRED)
+include_directories(${MPI_INCLUDE_PATH})
+
 # --------------------------------------------------------- SWE
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BIN_DIR})
 add_executable(${PROJECT_NAME} ${SOURCE})
+target_link_libraries(${PROJECT_NAME} ${MPI_CXX_LIBRARIES})
+
+if(MPI_COMPILE_FLAGS)
+    set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS "${MPI_COMPILE_FLAGS}")
+endif()
+
+if(MPI_LINK_FLAGS)
+    set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS "${MPI_LINK_FLAGS}")
+endif()

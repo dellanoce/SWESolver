@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <dirent.h>
 #include <sys/stat.h>
+#include <mpi.h>
 
 #include "Enums.h"
 

@@ -4,8 +4,14 @@ namespace swe {
 
     void printError(const string &message) {
 
-        cout << endl;
-        cerr << endl << "[Error] " << message << endl << endl;
+        int currentRank;
+        MPI_Comm_rank(MPI_COMM_WORLD, &currentRank);
+
+        if (currentRank == MASTER_NODE) {
+            cout << endl;
+            cerr << endl << "[Error] " << message << endl << endl;
+        }
+
         exit(EXIT_FAILURE);
     }
 

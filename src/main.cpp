@@ -2,16 +2,15 @@
 
 int main(int argc, char *argv[]) {
 
-    clock_t startSim = clock();
+    double startSim = MPI_Wtime();
     double totalSimTime, meshTime, solTime;
+    int worldSize, currentRank;
     string configFileName;
 
-    cout << "|------------------------------------------------------------------------------|" << endl;
-    cout << "|                                                                              |" << endl;
-    cout << "| 2D shallow water solver equations solver                                     |" << endl;
-    cout << "|                                                                              |" << endl;
-    cout << "|------------------------------------------------------------------------------|" << endl;
-    cout << endl;
+    // --- MPI init --- //
+    MPI_Init(&argc, &argv);
+    MPI_Comm_size(MPI_COMM_WORLD, &worldSize);
+    MPI_Comm_rank(MPI_COMM_WORLD, &currentRank);
 
     // --- Check inputs --- //
     if (argc < 2)
@@ -29,17 +28,17 @@ int main(int argc, char *argv[]) {
     cout << " Creating uniform structured mesh..." << endl;
 
     // -- Create uniform mesh --- //
-    clock_t startMesh = clock();
+    double startMesh = MPI_Wtime();
     Grid grid(config);
-    meshTime = (double) (clock() - startMesh)/CLOCKS_PER_SEC;
+    meshTime = MPI_Wtime() - startMesh;
     cout << " Mesh created in " << meshTime << " seconds" << endl << endl;
 
     cout << " Creating solution structure..." << endl;
 
     // --- Create solution object --- //
-    clock_t startSol = clock();
+    double startSol = MPI_Wtime();
     Solution w0(&grid);
-    solTime = (double) (clock() - startSol)/CLOCKS_PER_SEC;
+    solTime = MPI_Wtime() - startSol;
     cout << " Solution structure created in " << solTime << " seconds" << endl << endl;
 
     cout << " Creating solver structure..." << endl << endl;
@@ -61,8 +60,10 @@ int main(int argc, char *argv[]) {
 
     // --- Run simulation --- //
     god.runGodnuovSolver(&grid);
-    totalSimTime = (double) (clock() - startSim)/CLOCKS_PER_SEC;
-    cout << " Simulation ended in " << totalSimTime << " seconds" << endl;
+    totalSimTime = MPI_Wtime() - startSim;
+    cout << " Simulation ended in " << totalSimTime << " seconds on " << worldSize << " cores" << endl;
+
+    MPI_Finalize();
 
     return EXIT_SUCCESS;
 }
