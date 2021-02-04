@@ -53,8 +53,8 @@ void Grid::buildUniformGrid() {
     int bottomID, dxID, topID, sxID;
 
     if (this->nNodesY < 2)
-        swe::printError("NODES_Y must be greater than 1 for a 2D quadrilateral mesh. \n"
-                        "-> void Grid::buildUniformGrid()");
+        swe::printError("NODES_Y must be greater than 1 for a 2D quadrilateral mesh",
+                        __PRETTY_FUNCTION__);
 
     hx = (this->xf - this->x0)/(this->nNodesX - 1);
     hy = (this->yf - this->y0)/(this->nNodesY - 1);
@@ -86,8 +86,7 @@ void Grid::buildUniformGrid() {
 void Grid::getAdjacentNodesToInterface(const int &interfaceID, int &leftID, int &rightID) const {
 
     if (interfaceID > this->nInterfaces - 1)
-        swe::printError("Interface " + to_string(interfaceID) + " does not exist. \n"
-                        "-> void Grid::getAdjacentNodesToInterface(int interfaceID, int &leftID, int &rightID) const ");
+        swe::printError("Interface " + to_string(interfaceID) + " does not exist.", __PRETTY_FUNCTION__);
 
     if (interfaceID < (this->nNodesX - 1)*this->nNodesY) {
 
@@ -122,8 +121,7 @@ void Grid::getNormalToDualGridEdge(const int &dualEdgeID, double *normal) const 
     double xDiff, yDiff, length;
 
     if (dualEdgeID > this->nInterfaces - 1)
-        swe::printError("Interface " + to_string(dualEdgeID) + " does not exist. \n"
-                        "-> void Grid::getNormalToDualGridEdge(const int &dualEdgeID, double *normal) const");
+        swe::printError("Interface " + to_string(dualEdgeID) + " does not exist.", __PRETTY_FUNCTION__);
 
     this->getAdjacentNodesToInterface(dualEdgeID, mainLeftID, mainRightID);
 
@@ -140,8 +138,7 @@ void Grid::getDualElementMeasures(const int &dualElementID, double &hx, double &
     bool isOnBoundary = false, isOnCorner = false, isTopOrBottom = false;
 
     if (dualElementID > this->nNodes - 1)
-        swe::printError("Node " + to_string(dualElementID) + " does not exist. \n"
-                        "-> void Grid::getDualElementMeasures(const int &dualElementID, double &hx, double &hy)");
+        swe::printError("Node " + to_string(dualElementID) + " does not exist.", __PRETTY_FUNCTION__);
 
     for (int i = 0; i < this->nBoundaries && !isOnBoundary; ++i) {
         for (int j = 0; j < this->nodesIDOfBoundaryID[i].size() && !isOnBoundary; ++j) {
@@ -177,8 +174,7 @@ double Grid::getDualEdgeMeasure(const int &dualEdgeID) {
     int leftID, rightID;
 
     if (dualEdgeID > this->nInterfaces - 1)
-        swe::printError("Interface " + to_string(dualEdgeID) + " does not exist. \n"
-                        "->double Grid::getDualEdgeMeasure(const int &dualEdgeID)");
+        swe::printError("Interface " + to_string(dualEdgeID) + " does not exist.", __PRETTY_FUNCTION__);
 
     normal = new double [2];
 
@@ -198,8 +194,7 @@ double Grid::getDualElementArea(const int &dualElementID) {
     double hx, hy, area;
 
     if (dualElementID > this->nNodes - 1)
-        swe::printError("Node " + to_string(dualElementID) + " does not exist. \n"
-                        "->double Grid::getDualElementArea(const int &dualElementID)");
+        swe::printError("Node " + to_string(dualElementID) + " does not exist", __PRETTY_FUNCTION__);
 
     this->getDualElementMeasures(dualElementID, hx, hy);
     area = hx*hy;

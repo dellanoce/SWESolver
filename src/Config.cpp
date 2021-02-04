@@ -60,7 +60,7 @@ void Config::readConfigOptions(const string &configFile) {
         this->markerOpen  = getOptionVectorStrings(SETTINGS, configOptionList[MARKER_OPEN]);
     }
     else {
-        printError("No " + configFile + " found.");
+        printError("No " + configFile + " found.", __PRETTY_FUNCTION__);
     }
 }
 

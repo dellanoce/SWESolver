@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 
     // --- Check inputs --- //
     if (argc < 2)
-        printError("No configuration file specified.");
+        printError("No configuration file specified.", __PRETTY_FUNCTION__);
     else
         configFileName = argv[1];
 

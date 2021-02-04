@@ -45,7 +45,7 @@ namespace swe {
      * \brief Prints an error message and exit the program
      * @param[in] errorMessage - Error message to be printed
      */
-    void printError(const string &errorMessage);
+    void printError(const string &errorMessage, const string &functionName);
 
     /*!
      * \brief Prints a message when a default option is used
@@ -155,7 +155,7 @@ namespace swe {
         }
 
         if (!isFound)
-            printError("Option " + option + " does not match any enum identifier.");
+            printError("Option " + option + " does not match any enum identifier.", __PRETTY_FUNCTION__);
 
         return enumToSet;
     }

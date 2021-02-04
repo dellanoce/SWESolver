@@ -51,8 +51,7 @@ void OutputManager::printSolutionVTK(Grid *mesh, Solution *sol, double time) {
 
         SOLUTION.close();
     } else
-        swe::printError("Unable to write " + pathFolder + ".\n"
-                        "->void OutputManager::printSolutionVTK(Grid *mesh, Solution *sol, double time)");
+        swe::printError("Unable to write " + pathFolder + ".", __PRETTY_FUNCTION__);
 }
 
 void OutputManager::printSolutionCsv(Grid *mesh, Solution *sol, double time) {
@@ -70,10 +69,10 @@ void OutputManager::printSolutionCsv(Grid *mesh, Solution *sol, double time) {
     SOLUTION.precision(6);
 
     if (SOLUTION.is_open()) {
-    
+
         SOLUTION << "Coordinate_x[m],Coordinate_y[m],Coordinate_z[m],Conservative_1[m],"
                     "Conservative_2[m^2/2],Conservative_3[m^2/s], \n";
-                    
+
         for (int i = 0; i < mesh->nNodes; ++i) {
             SOLUTION << scientific << mesh->nodes[i][0] << ",",
             SOLUTION << scientific << mesh->nodes[i][1] << ",",
@@ -83,6 +82,5 @@ void OutputManager::printSolutionCsv(Grid *mesh, Solution *sol, double time) {
             SOLUTION << scientific << sol->conservative3(i) << endl;
         }
     } else
-        swe::printError("Unable to write " + pathFolder + ".\n"
-                        "->void OutputManager::printSolutionCsv(Grid *mesh, Solution *sol, double time)");
+        swe::printError("Unable to write " + pathFolder + ".", __PRETTY_FUNCTION__);
 }

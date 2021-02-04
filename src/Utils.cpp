@@ -11,14 +11,15 @@ namespace swe {
             cout << message << endl;
     }
 
-    void printError(const string &message) {
+    void printError(const string &message, const string &functionName) {
 
         int worldRank;
         MPI_Comm_rank(MPI_COMM_WORLD, &worldRank);
 
         if (worldRank == MASTER_NODE) {
-            cout << endl;
-            cerr << endl << "[Error] " << message << endl << endl;
+            cerr << endl;
+            cerr << endl << "[Error] " << message << endl;
+            cerr << "-> " << functionName << endl << endl;
         }
 
         exit(EXIT_FAILURE);
@@ -30,8 +31,8 @@ namespace swe {
         MPI_Comm_rank(MPI_COMM_WORLD, &worldRank);
 
         if (worldRank == MASTER_NODE) {
-            cout << "[Caution] \n";
-            cout << optionToFind + " not specified. Selected DEFAULT: " << defaultOption << ". Please check carefully"
+            clog << "[Caution] \n";
+            clog << optionToFind + " not specified. Selected DEFAULT: " << defaultOption << ". Please check carefully"
                  << " the configuration file if you want to set another " << optionToFind << endl << endl;
         }
     }
@@ -182,7 +183,7 @@ namespace swe {
                 out.push_back(line);
             }
         } else {
-            printError("Option " + optionToFind + " not found.");
+            printError("Option " + optionToFind + " not found.", __PRETTY_FUNCTION__);
         }
 
         return out;
@@ -205,7 +206,7 @@ namespace swe {
             ss >> str >> value;
         } else {
             if (mandatory) {
-                printError("Option " + optionToFind + " not found.");
+                printError("Option " + optionToFind + " not found.", __PRETTY_FUNCTION__);
             } else {
                 value = defaultValue;
                 printDefault(optionToFind, to_string(value));
@@ -232,7 +233,7 @@ namespace swe {
             ss >> str >> value;
         } else {
             if (mandatory) {
-                printError("Option " + optionToFind + " not found.");
+                printError("Option " + optionToFind + " not found.", __PRETTY_FUNCTION__);
             } else {
                 value = defaultValue;
                 printDefault(optionToFind, to_string(value));
