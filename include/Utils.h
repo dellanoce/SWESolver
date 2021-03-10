@@ -24,11 +24,11 @@ enum folderOptions_t {
 /*!
  * \namespace swe
  * \brief Namespace swe contains a list of methods used for parsing the configuration file, for handling errors
- * and for creating new directories.
- * The implementation is based on what is suggested on the following sites:
- * https://stackoverflow.com/questions/8075475/listing-the-files-in-a-directory-and-delete-them-in-c-c
- * https://stackoverflow.com/questions/4980815/c-determining-if-directory-not-a-file-exists-in-linux
- * https://linux.die.net/man/2/stat
+ * and for creating new directories. \n
+ * The implementation is based on what is suggested on the following sites: \n
+ * https://stackoverflow.com/questions/8075475/listing-the-files-in-a-directory-and-delete-them-in-c-c \n
+ * https://stackoverflow.com/questions/4980815/c-determining-if-directory-not-a-file-exists-in-linux \n
+ * https://linux.die.net/man/2/stat \n
  * https://stackoverflow.com/questions/25829143/trim-whitespace-from-a-string/25829178
  * \author Alberto Della Noce
  */
@@ -44,6 +44,7 @@ namespace swe {
     /*!
      * \brief Prints an error message and exit the program
      * @param[in] errorMessage - Error message to be printed
+     * @param[in] functionName - Name of the function
      */
     void printError(const string &errorMessage, const string &functionName);
 
@@ -57,9 +58,9 @@ namespace swe {
     /*!
      * \brief Creates an empty directory if it does not exist. Otherwise it cleans or keeps its files
      * @param[in] path - Folder path
-     * @param[in] folderOptions_t - Option for creating directory
+     * @param[in] option - Option for creating directory
      */
-    void setupFolder(const string& path, folderOptions_t);
+    void setupFolder(const string& path, folderOptions_t option);
 
     /*!
      * \brief Returns true whether string strTarget is found in vector vect
@@ -136,7 +137,7 @@ namespace swe {
 
     /*!
      * \brief Returns the enumerator related to the option string within the given map
-     * @tparam[in] T - Datatype for sub-options enumerator
+     * @tparam T - Datatype for sub-options enumerator
      * @param[in] option - Option to be found
      * @param[in] optionsMap - Map containing sub-options
      * @return Sub-option enumerator

@@ -1,7 +1,8 @@
 #ifndef SWE_OUTPUTMANAGER_H
 #define SWE_OUTPUTMANAGER_H
 
-#include "Solver.h"
+#include "Grid.h"
+#include "Solution.h"
 
 /*!
  * \class OutputManager

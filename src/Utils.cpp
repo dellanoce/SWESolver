@@ -22,7 +22,7 @@ namespace swe {
             cerr << "-> " << functionName << endl << endl;
         }
 
-        exit(EXIT_FAILURE);
+        MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
     }
 
     void printDefault(const string &optionToFind, const string &defaultOption) {

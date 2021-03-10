@@ -178,7 +178,7 @@ public:
 
 /*!
  * \brief Returns the sign of the object T
- * @tparam[in] T - Datatype for floating point value
+ * @tparam T - Datatype for floating point value
  * @param[in] val - Input value
  * @return Sign of val
  */
