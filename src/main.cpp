@@ -33,8 +33,10 @@ int main(int argc, char *argv[]) {
     Grid grid(config);
     meshTime = MPI_Wtime() - startMesh;
     ssMessage.str("");
-    ssMessage << " Mesh created in " << meshTime << " seconds" << endl;
+    ssMessage << " Mesh created in " << meshTime << " seconds on " << worldSize << " cores" << endl;
     printMessage(ssMessage.str());
+
+    MPI_Barrier(MPI_COMM_WORLD);
 
     // --- Create solution object --- //
     printMessage(" Creating solution structure...");
@@ -57,7 +59,7 @@ int main(int argc, char *argv[]) {
     printMessage(" Setting initial condition...");
 
     god.setInitialSolution(&grid, w0);
-    if (worldRank == MASTER_NODE) {
+    if (worldRank == ROOT_PROCESS) {
         swe::setupFolder("./solution_data", CLEAN_FOLDER);
         swe::setupFolder("./VTK", CLEAN_FOLDER);
     }

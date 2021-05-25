@@ -5,7 +5,7 @@ Config::Config(const string &configFile) {
     this->initDefault();
     this->readConfigOptions(configFile);
 
-    if (this->worldRank == MASTER_NODE) {
+    if (this->worldRank == ROOT_PROCESS) {
         this->printHeader();
         this->printSimulationSettings();
     }

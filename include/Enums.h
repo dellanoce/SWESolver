@@ -5,8 +5,8 @@
 #include <vector>
 #include <map>
 
-#define SWE_UNDEFINED -1
-#define MASTER_NODE 0
+#define SWE_UNDEFINED (-1)
+#define ROOT_PROCESS 0
 
 using namespace std;
 

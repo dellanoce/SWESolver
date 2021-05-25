@@ -7,7 +7,7 @@ namespace swe {
         int worldRank;
         MPI_Comm_rank(MPI_COMM_WORLD, &worldRank);
 
-        if (worldRank == MASTER_NODE)
+        if (worldRank == ROOT_PROCESS)
             cout << message << endl;
     }
 
@@ -16,7 +16,7 @@ namespace swe {
         int worldRank;
         MPI_Comm_rank(MPI_COMM_WORLD, &worldRank);
 
-        if (worldRank == MASTER_NODE) {
+        if (worldRank == ROOT_PROCESS) {
             cerr << endl;
             cerr << endl << "[Error] " << message << endl;
             cerr << "-> " << functionName << endl << endl;
@@ -30,7 +30,7 @@ namespace swe {
         int worldRank;
         MPI_Comm_rank(MPI_COMM_WORLD, &worldRank);
 
-        if (worldRank == MASTER_NODE) {
+        if (worldRank == ROOT_PROCESS) {
             clog << "[Caution] \n";
             clog << optionToFind + " not specified. Selected DEFAULT: " << defaultOption << ". Please check carefully"
                  << " the configuration file if you want to set another " << optionToFind << endl << endl;

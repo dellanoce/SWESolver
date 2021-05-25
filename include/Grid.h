@@ -14,7 +14,18 @@ using namespace std;
  */
 
 class Grid {
+private:
+    double x0Domain; /*!< \brief X-coordinate of the first vertex on X-axis of the physical domain */
+    double xfDomain; /*!< \brief X-coordinate of the second vertex on X-axis of the physical domain */
+    double y0Domain; /*!< \brief Y-coordinate of the first vertex on Y-axis of the physical domain */
+    double yfDomain; /*!< \brief Y-coordinate of the second vertex on Y-axis of the physical domain */
+    int nNodesXDomain; /*!< \brief Number of nodes on X-direction of the physical domain */
+    int nNodesYDomain; /*!< \brief Number of nodes on Y-direction of the physical domain */
+
+    void printRawMesh() const;
+
 public:
+ //   MPI_Comm cartComm;
     double x0; /*!< \brief X-coordinate of the first vertex on X-axis */
     double xf; /*!< \brief X-coordinate of the second vertex on X-axis */
     double y0; /*!< \brief Y-coordinate of the first vertex on Y-axis */
@@ -42,6 +53,10 @@ public:
      * \brief Destructor of the class
      */
     ~Grid();
+
+ //   void getDomainMeshProperties(Config *config);
+
+    void buildSubDomains();
 
     /*!
      * \brief Builds a 2D structured quadrilateral mesh on a rectangular domain

@@ -2,13 +2,14 @@
 
 Grid::Grid() {
 
-    this->x0 = 0.0;
-    this->y0 = 0.0;
-    this->xf = 0.0;
-    this->yf = 0.0;
+    this->x0Domain = 0.0;                   this->x0 = 0.0;
+    this->y0Domain = 0.0;                   this->y0 = 0.0;
+    this->xfDomain = 0.0;                   this->xf = 0.0;
+    this->yfDomain = 0.0;                   this->yf = 0.0;
 
-    this->nNodesX     = 0;
-    this->nNodesY     = 0;
+    this->nNodesXDomain = 0;                this->nNodesX = 0;
+    this->nNodesYDomain = 0;                this->nNodesY = 0;
+
     this->nNodes      = 0;
     this->nInterfaces = 0;
     this->nBoundaries = 0;
@@ -20,12 +21,73 @@ Grid::Grid() {
 
 Grid::Grid(Config *config) {
 
-    this->x0      = config->getXInitialLimit();
-    this->xf      = config->getXFinalLimit();
-    this->y0      = config->getYInitialLimit();
-    this->yf      = config->getYFinalLimit();
-    this->nNodesX = config->getNNodesX();
-    this->nNodesY = config->getNNodesY();
+    this->x0Domain = config->getXInitialLimit();               this->x0 = 0.0;
+    this->y0Domain = config->getYInitialLimit();               this->y0 = 0.0;
+    this->xfDomain = config->getXFinalLimit();                 this->xf = 0.0;
+    this->yfDomain = config->getYFinalLimit();                 this->yf = 0.0;
+
+    this->nNodesXDomain = config->getNNodesX();                this->nNodesX = 0;
+    this->nNodesYDomain = config->getNNodesY();                this->nNodesY = 0;
+
+    this->nNodes      = 0;
+    this->nInterfaces = 0;
+    this->nBoundaries = 0;
+
+    this->nodes = nullptr;
+
+    this->nodesIDOfBoundaryID.clear();
+
+    this->buildSubDomains();
+}
+
+Grid::~Grid() {
+
+    for (int i = 0; i < this->nNodes; ++i) {
+        delete [] this->nodes[i];
+    }
+    delete [] this->nodes;
+}
+
+void Grid::buildSubDomains() {
+
+    MPI_Comm cartComm;
+    int procForDim[2] = {0, 0}, periods[2] = {0, 0}, coords[2] = {0, 0};
+    int size, rank;
+    int nNodesXForProc, nNodesYForProc, remainderX, remainderY;
+    double hx, hy;
+
+    if (this->nNodesXDomain < 2 || this->nNodesYDomain < 2)
+        swe::printError("NODES_X and NODES_Y must be greater than 1 for a 2D quadrilateral mesh",
+                        __PRETTY_FUNCTION__);
+
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+
+    MPI_Dims_create(size, 2, procForDim);
+    MPI_Cart_create(MPI_COMM_WORLD, 2, procForDim, periods, 1, &cartComm);
+
+    MPI_Cart_coords(cartComm, rank, 2, coords);
+
+    nNodesXForProc = this->nNodesXDomain/procForDim[0];
+    nNodesYForProc = this->nNodesYDomain/procForDim[1];
+    remainderX = this->nNodesXDomain % procForDim[0];
+    remainderY = this->nNodesYDomain % procForDim[1];
+
+    this->nNodesX = nNodesXForProc;
+    this->nNodesY = nNodesYForProc;
+
+    if (coords[0] == procForDim[0] - 1)
+        this->nNodesX += remainderX;
+    if (coords[1] == procForDim[1] - 1)
+        this->nNodesY += remainderY;
+
+    hx = (this->xfDomain - this->x0Domain)/(this->nNodesXDomain - 1);
+    hy = (this->yfDomain - this->y0Domain)/(this->nNodesYDomain - 1);
+
+    this->x0 = this->x0Domain + nNodesXForProc*hx*coords[0];
+    this->y0 = this->y0Domain + nNodesYForProc*hy*coords[1];
+    this->xf = this->x0 + (this->nNodesX - 1)*hx;
+    this->yf = this->y0 + (this->nNodesY - 1)*hy;
 
     this->nNodes      = this->getNNodes();
     this->nInterfaces = this->getNInterfaces();
@@ -37,14 +99,8 @@ Grid::Grid(Config *config) {
     }
 
     this->buildUniformGrid();
-}
 
-Grid::~Grid() {
-
-    for (int i = 0; i < this->nNodes; ++i) {
-        delete [] this->nodes[i];
-    }
-    delete [] this->nodes;
+   // this->printRawMesh();
 }
 
 void Grid::buildUniformGrid() {
@@ -52,12 +108,13 @@ void Grid::buildUniformGrid() {
     double hx, hy;
     int bottomID, dxID, topID, sxID;
 
-    if (this->nNodesY < 2)
-        swe::printError("NODES_Y must be greater than 1 for a 2D quadrilateral mesh",
-                        __PRETTY_FUNCTION__);
-
     hx = (this->xf - this->x0)/(this->nNodesX - 1);
     hy = (this->yf - this->y0)/(this->nNodesY - 1);
+
+    if (this->nNodesX == 1 && this->nNodesY > 1)
+        hx = 0;
+    else if (this->nNodesY == 1 && this->nNodesX > 1)
+        hy = 0;
 
     for (int i = 0; i < this->nNodesY; ++i) {
         for (int j = 0; j < this->nNodesX; ++j) {
@@ -210,4 +267,26 @@ int Grid::getNNodes() const {
 int Grid::getNInterfaces() const {
 
     return (this->nNodesX - 1)*this->nNodesY + (this->nNodesY - 1)*this->nNodesX;
+}
+
+void Grid::printRawMesh() const {
+
+    int size, rank;
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+
+    for (int i = 0; i < size; ++i) {
+
+        if (i == rank) {
+            cout << endl;
+            cout << "Subdomain on rank: " << i << endl;
+            cout << "--------------------" << endl << endl;
+
+            for (int j = 0; j < this->nNodes; ++j) {
+                cout << "ID: " << j << " Coords: (" << this->nodes[j][0] << ";" << this->nodes[j][1] << ")" << endl;
+            }
+        }
+
+        MPI_Barrier(MPI_COMM_WORLD);
+    }
 }
