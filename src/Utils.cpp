@@ -45,7 +45,7 @@ namespace swe {
         string filepath;
         DIR *folderPtr = opendir(path.c_str());
 
-        // --- Create folder if it does not exist, otherwise remove or keep files --- //
+        // --- Create folder if does not exist, otherwise remove or keep files --- //
         // --- First condition returns 0 whether information about path.c_str() are successfully found --- //
         // --- Second returns true whether the directory exists --- //
         if (!(stat(path.c_str(), &folderStatus) == 0 && S_ISDIR(folderStatus.st_mode))) {
@@ -61,9 +61,9 @@ namespace swe {
             if (option == CLEAN_FOLDER) {
                 cout << " Cleaning folder " << path << endl;
 
-                while ((file = readdir(folderPtr)) != nullptr) {
+                while ((file = readdir(folderPtr))) {
                     // --- Build path for each file in the folder --- //
-                    filepath = path + file->d_name;
+                    filepath = path + "/" + file->d_name;
                     remove(filepath.c_str());
                 }
 
