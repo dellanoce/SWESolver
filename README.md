@@ -52,5 +52,12 @@ run the command:
 $ SWE config.cfg
 ```
 
+### Test cases
+Several test cases for SWESolver are available. They can be downloaded directly from GitHub 
+moving into the [TestCases](https://github.com/dellanoce/TestCases) repository or cloned running on terminal:
+```
+$ git clone git@github.com:dellanoce/TestCases.git
+```
+
 ### License 
 This software is distributed under the GNU GPLv3 license ([COPYING](COPYING)).
