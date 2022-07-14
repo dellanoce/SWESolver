@@ -53,11 +53,8 @@ $ SWE config.cfg
 ```
 
 ### Test cases
-Several test cases for SWESolver are available. They can be downloaded directly from GitHub 
-moving into the [TestCases](https://github.com/dellanoce/TestCases) repository or cloned running on terminal:
-```
-$ git clone git@github.com:dellanoce/TestCases.git
-```
+Several test cases for SWESolver are available. They are contained in the folder testCase and 
+they include a circular dambreak and a wave reflection on a square domain.
 
 ### License 
 This software is distributed under the GNU GPLv3 license ([COPYING](COPYING)).
